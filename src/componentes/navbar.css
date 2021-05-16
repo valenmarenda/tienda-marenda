@@ -1,0 +1,94 @@
+
+.NavbarItems{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.navbar-logo{
+    justify-self: start;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+
+  .nav-menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      justify-content: end;
+      align-items: start;
+      align-content: center;
+      margin-right: 2rem;
+      padding: 1rem 2rem;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+  }
+  .nav-menu li{
+    margin: 2rem 0;
+  }
+
+  nav{
+    background-color: #3AB3C4;
+
+
+  }
+
+  .nav-links{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color:  #0d181a;
+    text-decoration: none;
+  }
+
+  .nav-links:hover {
+      color:#fff;
+      transition: 0.5s;
+  }
+
+  .fa-bars{
+      color:#fff;
+      font-size: 3rem;
+  }
+
+  nav .logo-container img{
+    width: 10rem;
+  }
+
+  .nav-menu.active{
+    background: #048399;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    width: 25%;
+    height: 85vh;
+    }
+
+  .menu-icon{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    transform: translate(-100%, 60%);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .fa-times{
+    color: #fff;
+    font-size: 2rem;
+  }
+
+
+
+
+
+

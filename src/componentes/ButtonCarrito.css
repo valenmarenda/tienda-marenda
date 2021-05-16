@@ -1,0 +1,47 @@
+:root{
+    --primary: #fff;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+.btn:hover {
+
+    transition: all 0.3s ease-out;
+    color: black;
+}
+
+.btn--primary {
+    background-color: var(--primary);
+}
+
+.btn--outline{
+    background-color: transparent;
+    color: #3AB3C4;
+    padding: 6px 18px;
+    border-radius: 4px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 2.5rem;
+    color: #3AB3C4;
+
+}
+
+.btn--large {
+    padding: 6px 18x;
+    border-radius: 4px;
+    font-size: 2.8rem;
+    color: #3AB3C4;
+}
