@@ -20,8 +20,8 @@
       text-decoration: none;
       width: 100%;
       height: 100%;
-      justify-content: end;
-      align-items: start;
+      justify-content: flex-end;
+      align-items: flex-start;
       align-content: center;
       margin-right: 2rem;
       padding: 1rem 2rem;

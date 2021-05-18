@@ -1,0 +1,29 @@
+.containerItemCount{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border: 1px solid #3AB3C4;
+    width: 22%;
+}
+.containerContador h4{
+    font-size: 1.5rem;
+}
+
+.containerContador{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itemCount {
+    font-size: 1.5rem;
+    border: none;
+    margin: 0 0.3rem;
+}
+.itemCount .fa-plus{
+    background-color: #dd4242;
+}
+.itemCount .fa-minus{
+    background-color: #3f6fd6;
+}
