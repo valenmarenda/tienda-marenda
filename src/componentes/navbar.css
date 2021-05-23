@@ -1,13 +1,22 @@
 
 .NavbarItems{
     height: 8rem;
+    width: 100%;
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
+    justify-content: space-around;
+    justify-items: center;
+
 }
+
+.btn-carrito{
+  justify-content: flex-end;
+
+}
+
 .navbar-logo{
-    justify-self: start;
+    justify-self: center;
     margin-left: 2rem;
     cursor: pointer;
 }
@@ -86,6 +95,8 @@
     color: #fff;
     font-size: 2rem;
   }
+
+
 
 
 

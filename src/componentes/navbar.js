@@ -44,7 +44,6 @@
 import React, { Component } from 'react'
 import { MenuItems } from "./MenuItems"
 import './navbar.css';
-import { ButtonCarrito } from "./ButtonCarrito"
 import Cartwidget from './CartWidget';
 import logo from '../componentes/img/logo.png';
 
@@ -56,25 +55,29 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-     
-      <div className="menu-icon" onClick={this.handleClick}>
-        <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+      <div>
 
-      </div>
-      <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-        {MenuItems.map ((item, index) =>{
-          return (
+         <div className="menu-icon" onClick={this.handleClick}>
+           <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </div>
+         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+          {MenuItems.map ((item, index) =>{
+           return (
              <li key={index}><a className={item.cname} href={item.url}>{item.title}</a></li>
-          )
-        })}
-      </ul>
-      <a href="#">
+           )
+           })}
+         </ul>
+      </div>
+      <div>
+       <a href="#">
         <div className="logo-container">
           <img src={logo} alt=""/>
         </div>
-      </a>
-      <ButtonCarrito>Carrito <i class="fas fa-shopping-cart"></i></ButtonCarrito>
-      <Cartwidget/>
+       </a>
+      </div>
+      <div className="btn-carrito">
+       <Cartwidget/>
+      </div>
       </nav>
     )
   }
