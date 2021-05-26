@@ -13,12 +13,8 @@ const ItemCount = ({ stock, initial}) => {
 
     }
  }
-
- 
- 
  return (
      <div className="containerContador">
-         <h1>Contador de productos</h1>
          <div className="containerItemCount">
             <button className="itemCount" onClick={() => onAdd(-1)}><i class="fas fa-minus"></i></button> 
              <h4> {stockRequired} </h4>

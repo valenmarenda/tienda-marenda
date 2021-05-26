@@ -4,10 +4,11 @@
     align-content: center;
     align-items: center;
     border: 1px solid #3AB3C4;
-    width: 22%;
+    border-radius: 0.8rem;
+    width: 10rem;
 }
 .containerContador h4{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .containerContador{
@@ -17,13 +18,16 @@
 }
 
 .itemCount {
-    font-size: 1.5rem;
+    font-size: 2rem;
     border: none;
     margin: 0 0.3rem;
+    background-color: #fff;
+    color: #3AB3C4;
 }
-.itemCount .fa-plus{
-    background-color: #dd4242;
-}
-.itemCount .fa-minus{
-    background-color: #3f6fd6;
+
+@media (min-width: 678px){
+
+    .containerContador{
+        align-items: flex-start;
+    }
 }

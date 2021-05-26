@@ -1,0 +1,97 @@
+.container-item-detail{
+    margin: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.container-item-detail img{
+    width: 90%;
+}
+
+.container-item-detail h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+.container-item-detail p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.price-detail{
+    font-weight: bold;
+}
+
+.button-item-detail{
+    font-family: 'Montserrat', sans-serif;
+    margin: 2rem 0 2rem 0;
+    font-size: 2rem;
+    border-radius: 0.8rem;
+    height: 5rem;
+    width: 15rem;
+    background-color: #3AB3C4;
+    border-color: #3AB3C4;
+    color: #ffff;
+    border-style: solid;
+
+}
+.icon-item-detail {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #3AB3C4;
+    border: 1px solid #3AB3C4;
+}
+
+.icon-item-detail:hover{
+    background-color: #3AB3C4;
+    color: #fff;
+}
+.button-item-detail:hover{
+    background-color: #fff;
+    color: #3AB3C4;
+}
+.buttons-item-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 678px){
+    .container-item-detail{
+        margin: 5rem 2rem;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+    .container-item-detail img{
+        width: 40%;
+    }
+    .container-item-detail button{
+        align-items: flex-start;
+    }
+    .button-item-detail{
+        margin: 2rem 2rem 2rem 0;
+    }
+    .info-item-details{
+        border-left: 1px solid #3AB3C4;
+        padding-left: 1rem;
+    }
+
+    .container-item-detail p{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    .buttons-item-detail{
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+    }
+    
+}
