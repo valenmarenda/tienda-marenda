@@ -1,4 +1,14 @@
-.ItemListContainer{
+.container-home{
     text-align: center;
+}
 
+.container-item-list{
+    margin: 3rem ;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.links-category{
+    padding-left: 8rem;
 }

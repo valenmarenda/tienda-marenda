@@ -1,0 +1,114 @@
+.card-container .MuiCardMedia-root{
+    height: 280px;
+    padding: 0 1rem;
+
+}
+
+.card-container{
+    padding: 2rem
+}
+
+.card-container h2{
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 2rem 0 0 3rem;
+}
+
+.card-container p{
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 3rem;
+    
+}
+.card-container .MuiCardContent-root{
+    padding: 0;
+    text-align: start;
+}
+.icon-item-detail-shopping{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #3AB3C4;
+    color: #fff;
+    border: 1px solid #3AB3C4;
+    cursor: pointer;
+}
+
+.icon-item-detail-shopping:hover{
+    background-color: #fff;
+    color: #3AB3C4;
+}
+
+.fa-shopping-cart{
+    font-size: 2.5rem;
+
+}
+
+.card-container-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.card-container-buttons{
+    padding: 1rem 2rem;
+    
+}
+
+.card-container-2 p{
+    font-weight: bold;
+    color: black;
+    
+}
+
+.card-container-2 .MuiButtonBase-root{
+    margin: 0;
+    padding: 0 ;
+    display: flex;
+}
+.card-container-1{
+    cursor: pointer;
+    position: relative;
+    transition: all 500ms ease-out;
+}
+
+.card-capa{
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(3, 82, 102, 0.7);
+text-align: center;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+transition: all 1s ease-out;
+opacity: 0;
+visibility: hidden;
+
+}
+
+.card-capa h2{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.3rem;
+    color: black;
+    text-align: center;
+    padding: 0;
+
+}
+
+.card-container-1:hover .card-capa{
+    opacity: 1!important;
+    visibility: visible!important;
+
+}
+
+
+

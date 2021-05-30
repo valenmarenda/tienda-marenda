@@ -1,0 +1,17 @@
+.cards-container{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+@media (min-width: 550px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media (min-width: 860px){
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

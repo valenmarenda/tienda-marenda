@@ -4,10 +4,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
-    justify-content: space-around;
-    justify-items: center;
-
+    align-content: center;
+    justify-content: space-between;
 }
 
 .btn-carrito{
@@ -22,14 +20,13 @@
 }
 
 
-  .nav-menu {
+.nav-menu {
       display: flex;
       flex-direction: column;
       list-style: none;
       text-decoration: none;
       width: 100%;
       height: 100%;
-      justify-content: flex-end;
       align-items: flex-start;
       align-content: center;
       margin-right: 2rem;
@@ -39,10 +36,10 @@
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
-  }
-  .nav-menu li{
+}
+.nav-menu li{
     margin: 2rem 0;
-  }
+}
 
   nav{
     background-color: #3AB3C4;
@@ -65,6 +62,7 @@
   .fa-bars{
       color:#fff;
       font-size: 3rem;
+      padding-top: 0.5rem;
   }
 
   nav .logo-container img{
@@ -82,7 +80,9 @@
     }
 
   .menu-icon{
-    display: block;
+    display: flex;
+    align-content: center;
+    align-self: center;
     position: absolute;
     top: 0;
     left: 5rem;
@@ -94,9 +94,49 @@
   .fa-times{
     color: #fff;
     font-size: 2rem;
+    padding-top: 1.1rem;
   }
 
+  .NavbarItems p{
+    padding-left: 6rem;
+    padding-top: 0.3rem;
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
 
+  }
+
+  .icon-navbar{
+    margin: 2rem 0 2rem 0;
+    font-size: 2.5rem;
+    background-color: #3AB3C4;
+    border: none;
+    color: #ffff;
+    margin-right: 1rem;
+
+  }
+  .icon-navbar button{
+    margin-right: 1.2rem ;
+  }
+nav .nav-suscribe{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+
+}
+.nav-suscribe i{
+  margin-right: 0.5rem;
+}
+.nav-suscribe:hover{
+  color: #0d181a;
+  transition: 1s;
+}
 
 
 

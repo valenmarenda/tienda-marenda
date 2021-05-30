@@ -93,5 +93,9 @@
         flex-direction: row;
         margin-top: 3rem;
     }
+    .container-item-detail img:hover{
+        transform: scale(1.04);
+        transition: transform .5s ease
+    }
     
 }

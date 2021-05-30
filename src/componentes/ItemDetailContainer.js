@@ -2,6 +2,8 @@ import React, { } from 'react'
 import { useEffect, useState } from "react";
 import './ItemListContainer.css';
 import ItemDetail from './ItemDetail';
+import ItemDetailInfo from './ItemDetailInfo'
+import './ItemDetailContainer.css'
 
 function ItemDetailContainer(){
     const dataItems = 
@@ -28,16 +30,19 @@ function ItemDetailContainer(){
     )
     }, )
 
-return(itemDetail && 
+return( itemDetail && 
+  <div>
     <ItemDetail
-            title={itemDetail.title}
-            img={itemDetail.img}
-            price={itemDetail.price}
-            key={itemDetail.id}
-            desc={itemDetail.desc}
-            >
-            </ItemDetail>
-   
+      title={itemDetail.title}
+       img={itemDetail.img}
+       price={itemDetail.price}
+       key={itemDetail.id}
+       desc={itemDetail.desc}>
+    </ItemDetail>
+     <div className="item-detail-info-container">
+      <ItemDetailInfo> </ItemDetailInfo>
+     </div>
+   </div>
 )
 }
 

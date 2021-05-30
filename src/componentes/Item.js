@@ -1,13 +1,13 @@
-
 import React from 'react';
+import './Item.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
 
 const useStyles = makeStyles({
   root: {
@@ -18,35 +18,52 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Item({img, title, price}) {
+export default function Item({img, title, price, cat}) {
   const classes = useStyles();
 
   return (
+    <div className="card-container">
     <Card className={classes.root}>
+     <div className="card-container-1">
       <CardActionArea>
+
+      <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className="item-category"> 
+          {cat} 
+          </Typography>
+        </CardContent>
         <CardMedia
           className={classes.media}
           image={img}
           title={title}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p"> 
+
+        <div className="card-capa">
+        <h2>Ver más</h2>
+      </div>
+      </CardActionArea>
+      </div>
+      <div className="card-container-2">
+      <CardContent >
+          <Typography variant="body2" color="textSecondary" component="p"> <span>$</span>
           {price} 
           </Typography>
         </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Comprar
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+      <CardActions className="card-container-buttons">
+        
+        <button className="icon-item-detail-shopping"><i className="fas fa-shopping-cart"></i></button>
+        
+        
+        <button className="icon-item-detail"><i className="far fa-heart"></i></button>
+        
       </CardActions>
+      </div>
     </Card>
+
+    </div>
   );
 }
 

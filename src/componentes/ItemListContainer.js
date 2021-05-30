@@ -1,62 +1,52 @@
-import React, { } from 'react'
-import ItemCount from './ItemCount'
+import React, { useEffect, useState} from 'react'
 import ItemList from './ItemList';
-import { useEffect, useState } from "react";
 import './ItemListContainer.css';
+import data from '../data.json';
+import { useParams } from 'react-router-dom';
+import NavBarCards from "./NavBarCards"
+import Spinner from "./Spinner"
 
-function ItemListContainer(){
-    const dataItems = [
-        {
-            "id": 1,
-            "title": "Crema Cuerpo",
-            "price": "$1800",
-            "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg"
-          },
-          {
-            "id": 2,
-            "title": "Crema",
-            "price": "$1800",
-            "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg"
-          },
-          {
-            "id": 3,
-            "title": "Crema rostro",
-            "price": "$1800",
-            "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg"
-          },
-          {
-            "id": 4,
-            "title": "Crema Cuerpo",
-            "price": "$1800",
-            "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg"
-          },
-    ];
-    
-    
-    const [itemContent, setItemContent] = useState(null);
+
+function ItemListContainer (){
+    const [itemContent, setItemContent] = useState([]);
+    const [loader, setLoader]= useState(false);
+    const { catId } = useParams();
+
     useEffect(()=>{
-    const promise = new Promise ((resolve)=>{
-      setTimeout(()=>{
-        resolve(dataItems);
-      }, 2000);
-    })
-    promise.then (
-      function (value){
-        setItemContent(value)
-      },
-      function(reason){
-    
-      }
-    )
-    },[])
+      const getItems = new Promise (resolve =>{
+        setLoader(true);
+        setTimeout(()=> { 
+          resolve (data);
+       }, 2000);
+      } );
+
+      catId
+      ? getItems.then (res => {
+        setItemContent (res.filter(it=> it.category === catId))
+        setLoader(false)
+      })
+      : getItems.then (res => {
+        setItemContent(res)
+        setLoader(false)
+      });
+    },[catId])
+    const categories= [
+      { addres: '/', text: 'Todos'},
+      { addres: '/category/rostro', text: 'rostro'},
+      { addres: '/caterory/cuerpo', text: 'cuerpo'},
+      { addres: '/category/makeup', text: 'makeup'},
+    ]
 return(
-    <div>
-    <div className="ItemListContainer">
-    <h1>Aqui irá el catálogo <span>😻</span></h1>
-    <ItemCount stock={5} initial={1}/>
-    </div>
-    <ItemList>{itemContent}</ItemList>
-    </div>
+    <>
+     <NavBarCards>{categories}</NavBarCards> 
+     <div className="container-home">
+       <h1>Tienda online</h1>
+       <div className="container-item-list">
+         {loader && <Spinner/>}
+         <ItemList>{itemContent}</ItemList>
+       </div>
+     </div>
+    </>
 )
 }
 
