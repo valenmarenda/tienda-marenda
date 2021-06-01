@@ -42,7 +42,7 @@ Uso de Material UI para dar formato a la aplicación.
 Uso de React Router Dom para la navegación​
 ​
 ### Aplicación en funcionamiento 🛠️
-
+![Tienda-Marenda](https://user-images.githubusercontent.com/77030740/120401987-79334780-c317-11eb-88bb-1adaa1ec9e69.gif)
 
 
 ### Autora ✒️
