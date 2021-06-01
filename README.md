@@ -6,7 +6,7 @@ Es una e-commmers para la venta de productos de belleza.
 
 -Registro de usuarios: con campos validados al realizar el registro.
 
--Formulario de contacto: con campos que serán validados a cuando se envíe el formulario.
+-Formulario de contacto: con campos que serán validados.
 
 -Filtro por categorías: tomando las categorías de la base de datos se generan filtros de productos.
 
@@ -45,9 +45,9 @@ Es una e-commmers para la venta de productos de belleza.
 
 ### Dependencias 📦
 ​
-Uso de Material UI para dar formato a la aplicación.
+-Uso de Material UI para dar formato a la aplicación.
 ​
-Uso de React Router Dom para la navegación​
+-Uso de React Router Dom para la navegación​
 ​
 ### Aplicación en funcionamiento 🛠️
 ![Tienda-Marenda](https://user-images.githubusercontent.com/77030740/120401987-79334780-c317-11eb-88bb-1adaa1ec9e69.gif)
