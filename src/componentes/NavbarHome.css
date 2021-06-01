@@ -74,7 +74,7 @@
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 200;
     width: 25%;
     height: 85vh;
     }
@@ -106,15 +106,7 @@
 
   }
 
-  .icon-navbar{
-    margin: 2rem 0 2rem 0;
-    font-size: 2.5rem;
-    background-color: #3AB3C4;
-    border: none;
-    color: #ffff;
-    margin-right: 1rem;
 
-  }
   .icon-navbar button{
     margin-right: 1.2rem ;
   }

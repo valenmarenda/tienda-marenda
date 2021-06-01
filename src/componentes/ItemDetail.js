@@ -1,7 +1,7 @@
-
 import React from 'react';
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
+
 
 
 export default function ItemDetail({img, title, price, desc}) {
@@ -14,7 +14,7 @@ export default function ItemDetail({img, title, price, desc}) {
          <div className="info-item-details">
            <h1>{title}</h1>
            <p> {desc} </p>
-           <p className="price-detail">{price} </p>
+           <p className="price-detail"> <span>$</span> {price} </p>
            <p> Cantidad: </p>
            <ItemCount stock={5} initial={1}/>
            <div className="buttons-item-detail">
@@ -23,7 +23,6 @@ export default function ItemDetail({img, title, price, desc}) {
            </div>
          </div>
        </div>
-       
       </div>
 
   );

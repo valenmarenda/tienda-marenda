@@ -1,0 +1,74 @@
+.footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    background-color: #3AB3C4;
+}
+
+.footer-container h1{
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+    letter-spacing: 0.5rem;
+    margin: 1rem 0;
+}
+
+.footer-container-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    justify-items: center;
+
+}
+
+.footer-icon{
+    border-radius: 50%;
+    background-color: #fff;
+    color: #3AB3C4;
+    border: 1px solid #fff;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon:hover{
+    color: #000000;
+    box-shadow: 2px 2px 2px rgb(192, 188, 188);
+    transition: 1s;
+}
+.footer-container button {
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', cursive;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #3AB3C4;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(192, 188, 188);
+}
+
+.footer-container button:hover{
+    color: #000000;
+    transition: 1s;
+}
+
+.footer-container h4{
+    font-family: 'Montserrat', sans-serif;
+}
+

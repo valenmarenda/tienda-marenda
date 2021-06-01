@@ -52,10 +52,12 @@
 .icon-item-detail:hover{
     background-color: #3AB3C4;
     color: #fff;
+    transition: 1s;
 }
 .button-item-detail:hover{
     background-color: #fff;
     color: #3AB3C4;
+    transition: 1s;
 }
 .buttons-item-detail{
     display: flex;

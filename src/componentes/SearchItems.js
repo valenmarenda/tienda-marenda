@@ -2,16 +2,18 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
+import './NavbarCards.css';
 export default function ComboBox() {
   return (
+      <div className="searchItem-container">
     <Autocomplete
       id="combo-box-demo"
       options={top100Films}
       getOptionLabel={(option) => option.title}
-      style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Combo box" variant="outlined" />}
+      renderInput={(params) => <TextField {...params} className="searchItems" label="Categorias" variant="outlined" />}
     />
+    </div>
+
   );
 }
 

@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 
 
 
-function TabPanel(props) {
+function TabPanel(props, ) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function ItemDetailInfo() {
+export default function ItemDetailInfo(desc) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -83,7 +83,7 @@ export default function ItemDetailInfo() {
           aria-label="full width tabs example"
           
         >
-          <Tab  classname="item-info-button" label="Detalle" {...a11yProps(0)} />
+          <Tab  className="item-info-button" label="Detalle" {...a11yProps(0)} />
           <Tab label="Medios De Pago" {...a11yProps(1)} />
           <Tab label="Envios" {...a11yProps(2)} />
         </Tabs>
@@ -94,7 +94,7 @@ export default function ItemDetailInfo() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} >
-         <p>Detalle ver si se puede agregar el mismo detalle que en el item</p> 
+         <p>  Detalle ver si se puede agregar el mismo detalle que en el item</p> 
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <h3>Pagos a través de</h3>

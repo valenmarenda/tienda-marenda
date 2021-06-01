@@ -7,6 +7,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import {Link} from 'react-router-dom'
+
 
 
 const useStyles = makeStyles({
@@ -18,15 +20,16 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Item({img, title, price, cat}) {
+export default function Item({img, title, price, cat, pId}) {
   const classes = useStyles();
 
   return (
-    <div className="card-container">
-    <Card className={classes.root}>
+    <>
+    <div  className="card-container">
+    <Card   className={classes.root}>
+      <Link  to={`/productDetail/${pId}`}>
      <div className="card-container-1">
       <CardActionArea>
-
       <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
@@ -46,6 +49,7 @@ export default function Item({img, title, price, cat}) {
       </div>
       </CardActionArea>
       </div>
+      </Link>
       <div className="card-container-2">
       <CardContent >
           <Typography variant="body2" color="textSecondary" component="p"> <span>$</span>
@@ -62,8 +66,9 @@ export default function Item({img, title, price, cat}) {
       </CardActions>
       </div>
     </Card>
-
     </div>
+
+    </>
   );
 }
 

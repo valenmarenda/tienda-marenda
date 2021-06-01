@@ -5,6 +5,8 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 import ItemListContainer from './componentes/ItemListContainer';
 import NavbarHome from './componentes/NavbarHome';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import NavBarCards from './componentes/NavBarCards';
+import Footer from './componentes/Footer';
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
     <div className="App">
     <BrowserRouter>
     <NavbarHome/>
+    <NavBarCards></NavBarCards>
     <Switch>
     <Route exact path="/">
       <ItemListContainer/>  
@@ -22,7 +25,11 @@ function App() {
       <Route exact path="/productDetail">
       <ItemDetailContainer/>
       </Route>
+      <Route exact path="/productDetail/:pId">
+      <ItemDetailContainer/>
+      </Route>
     </Switch>
+    <Footer></Footer>
     </BrowserRouter>  
     </div>
   );

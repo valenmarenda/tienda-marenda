@@ -3,7 +3,6 @@ import ItemList from './ItemList';
 import './ItemListContainer.css';
 import data from '../data.json';
 import { useParams } from 'react-router-dom';
-import NavBarCards from "./NavBarCards"
 import Spinner from "./Spinner"
 
 
@@ -30,15 +29,11 @@ function ItemListContainer (){
         setLoader(false)
       });
     },[catId])
-    const categories= [
-      { addres: '/', text: 'Todos'},
-      { addres: '/category/rostro', text: 'rostro'},
-      { addres: '/caterory/cuerpo', text: 'cuerpo'},
-      { addres: '/category/makeup', text: 'makeup'},
-    ]
+
+
 return(
     <>
-     <NavBarCards>{categories}</NavBarCards> 
+
      <div className="container-home">
        <h1>Tienda online</h1>
        <div className="container-item-list">

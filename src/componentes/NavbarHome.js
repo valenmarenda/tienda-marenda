@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { MenuItems } from "./MenuItems"
-import './navbar.css';
+import './NavbarHome.css';
 import logo from '../componentes/img/logo.png';
 import {Link} from "react-router-dom"
 
@@ -35,11 +35,15 @@ class NavbarHome extends Component {
         </div>
         </Link>
       </div>
-        <a className="nav-suscribe">
+      <Link to="/">
+        <div className="nav-suscribe">
         <i className="far fa-edit"></i>
         <h3>Registrate</h3>
-        </a>
+        </div>
+        </Link>
+
       </nav>
+
     )
   }
 }

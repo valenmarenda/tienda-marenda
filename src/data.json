@@ -1,6 +1,6 @@
 [{
     "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg",
-    "id": 1,
+    "id": 0,
     "title": "Biosmotic Cream",
     "price": 1957,
     "category": "rostro",
@@ -8,7 +8,7 @@
     "vendido": true
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 2,
+    "id": 1,
     "title": "Cellu reductil",
     "price": 1314,
     "category": "cuerpo",
@@ -16,7 +16,7 @@
     "vendido": true
   }, {
     "img": "https://www.lidherma.com/uploads/mmk_eyeshadow_2.jpg",
-    "id": 3,
+    "id": 2,
     "title": "Concealer stick",
     "price": 1314,
     "category": "makeup",
@@ -24,8 +24,16 @@
     "vendido": false
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 4,
+    "id": 3,
     "title": "Aquashoot",
+    "price": 1314,
+    "category": "cuerpo",
+    "desc":"Crema gel muy suave y fresca para rostro.",
+    "vendido": false
+  }, {
+    "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
+    "id": 4,
+    "title": "Cellu reductil",
     "price": 1314,
     "category": "cuerpo",
     "desc":"Crema gel muy suave y fresca para rostro.",
@@ -33,14 +41,6 @@
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
     "id": 5,
-    "title": "Cellu reductil",
-    "price": 1314,
-    "category": "cuerpo",
-    "desc":"Crema gel muy suave y fresca para rostro.",
-    "vendido": false
-  }, {
-    "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 6,
     "title": "Aquashoot",
     "price": 1314,
     "category": "cuerpo",
@@ -48,7 +48,7 @@
     "vendido": false
   }, {
     "img": "https://www.lidherma.com/uploads/mmk_eyeshadow_2.jpg",
-    "id": 7,
+    "id": 6,
     "title": "Fundation",
     "price": 1314,
     "category": "makeup",
@@ -56,7 +56,7 @@
     "vendido": false
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 8,
+    "id": 7,
     "title": "Aquashoot",
     "price": 1314,
     "category": "cuerpo",
@@ -64,7 +64,7 @@
     "vendido": false
   }, {
     "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg",
-    "id": 9,
+    "id": 8,
     "title": "Biosmotic Cream",
     "price": 1957,
     "category": "rostro",
@@ -72,7 +72,7 @@
     "vendido": true
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 10,
+    "id": 9,
     "title": "Cellu reductil",
     "price": 1314,
     "category": "cuerpo",
@@ -80,7 +80,7 @@
     "vendido": false
   }, {
     "img": "https://www.lidherma.com/uploads/mmk_eyeshadow_2.jpg",
-    "id": 11,
+    "id": 10,
     "title": "Concealer stick",
     "price": 1314,
     "category": "makeup",
@@ -88,7 +88,7 @@
     "vendido": false
   }, {
     "img": "https://www.lidherma.com/uploads/mmk_eyeshadow_2.jpg",
-    "id": 12,
+    "id": 11,
     "title": "VIP lashes",
     "price": 1314,
     "category": "makeup",
@@ -96,7 +96,7 @@
     "vendido": false
   }, {
     "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg",
-    "id": 13,
+    "id": 12,
     "title": "Detofify",
     "price": 1957,
     "category": "rostro",
@@ -104,7 +104,7 @@
     "vendido": true
   }, {
     "img": "https://www.lidherma.com/uploads/ldh_dherma_food_berries_body_yogurt_180g_mobile_001.jpg",
-    "id": 14,
+    "id": 13,
     "title": "Cellu reductil",
     "price": 1314,
     "category": "cuerpo",
@@ -112,7 +112,7 @@
     "vendido": false
   }, {
     "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/702/918/products/sin-titulo-2020-08-29t170444-8651-16bad57dd82e8aeefc15987319315696-1024-1024.jpg",
-    "id": 15,
+    "id": 14,
     "title": "Biosmotic Cream",
     "price": 1957,
     "category": "rostro",

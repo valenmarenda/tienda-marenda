@@ -39,6 +39,7 @@
 .icon-item-detail-shopping:hover{
     background-color: #fff;
     color: #3AB3C4;
+    transition: 1s;
 }
 
 .fa-shopping-cart{
@@ -103,12 +104,18 @@ visibility: hidden;
     padding: 0;
 
 }
+.card-container-1 h2,p{
+    text-decoration-line: none!important;
+    color: #000000;
+}
 
 .card-container-1:hover .card-capa{
     opacity: 1!important;
     visibility: visible!important;
 
 }
-
+a:-webkit-any-link{
+    text-decoration: none;
+}
 
 

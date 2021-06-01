@@ -1,18 +1,20 @@
 import Item from "./Item"
 import './ItemList.css'
 
-const ItemList = (itemContent) => {
+const ItemList = (itemContent, index) => {
 
 return (
 <div className="cards-container">
+    
     {itemContent.children?.map(i => {
         return (
             <Item 
             title={i.title}
             img= {i.img}
-            price= {i.price}
-            key= {i.id}
+            pId= {i.id}
             cat={i.category}
+            price= {i.price}
+            key={i.id} 
             >
             </Item>
         )
