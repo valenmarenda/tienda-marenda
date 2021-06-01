@@ -4,15 +4,23 @@ Es una e-commmers para la venta de productos de belleza.
 
 ## Cuenta con 📋
 
-Registro de usuarios: con campos validados al realizar el registro.
-Formulario de contacto: con campos que serán validados a cuando se envíe el formulario.
-Filtro por categorías: tomando las categorías de la base de datos se generan filtros de productos.
-Botones de filtro: filtran los productos según sus categorías. 
-Carrito: cuenta vista de los productos agregados al carrito, con precio e imagen, donde se puede agregar o eliminar items.
-Lista de deseos: el usuario podrá agregar items que quedarán guardados en una lista mientras realiza la navegación por el resto del sitio.
-Vistas de productos: vista de productos con foto y detalles.
-Vista de cada item: vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
-Control de stock: revisa que los usuarios no puedan agregar más items al carrito de los que hay disponibles y el stock real al momento de generar la compra. 
+-Registro de usuarios: con campos validados al realizar el registro.
+
+-Formulario de contacto: con campos que serán validados a cuando se envíe el formulario.
+
+-Filtro por categorías: tomando las categorías de la base de datos se generan filtros de productos.
+
+-Botones de filtro: filtran los productos según sus categorías. 
+
+-Carrito: cuenta vista de los productos agregados al carrito, con precio e imagen, donde se puede agregar o eliminar items.
+
+-Lista de deseos: el usuario podrá agregar items que quedarán guardados en una lista mientras realiza la navegación por el resto del sitio.
+
+-Vistas de productos: vista de productos con foto y detalles.
+
+-Vista de cada item: vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
+
+-Control de stock: revisa que los usuarios no puedan agregar más items al carrito de los que hay disponibles y el stock real al momento de generar la compra. 
 
 ### Instalación 🔧
 ​
