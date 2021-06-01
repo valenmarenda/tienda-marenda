@@ -12,7 +12,7 @@ Es una e-commmers para la venta de productos de belleza.
 
 -Botones de filtro: filtran los productos según sus categorías. 
 
--Carrito: cuenta vista de los productos agregados al carrito, con precio e imagen, donde se puede agregar o eliminar items.
+-Carrito: cuenta con una vista de los productos agregados al carrito, con precio e imagen, donde se pueden agregar o eliminar items.
 
 -Lista de deseos: el usuario podrá agregar items que quedarán guardados en una lista mientras realiza la navegación por el resto del sitio.
 
