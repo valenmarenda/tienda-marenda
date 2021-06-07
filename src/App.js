@@ -28,6 +28,9 @@ function App() {
       <Route exact path="/productDetail/:pId">
       <ItemDetailContainer/>
       </Route>
+      <Route exact path="/productDetail/card">
+      <ItemDetailContainer/>
+      </Route>
     </Switch>
     <Footer></Footer>
     </BrowserRouter>  
