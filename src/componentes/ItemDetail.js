@@ -2,10 +2,19 @@ import React, {useState} from 'react';
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
 import {Link} from 'react-router-dom'
+//import { useCart} from '../context/CartContext';
 
 
 
 export default function ItemDetail({img, title, price, desc}) {
+  //const {cartInfo, addItem, removeItem, clear, isInCart} = useCart()
+ // console.log(cartInfo, addItem, removeItem, clear, isInCart)
+
+ /// const addProduct = () => {
+ //   cartInfo.addItem ( {item: {title}, quantity: {setEventItem}, price:{price}} )
+ // }
+ //onClick={addProduct} 
+
 const [eventItem, setEventItem] = useState (0);
 const onAddItem = (e) => {
 setEventItem(e)

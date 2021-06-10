@@ -7,34 +7,36 @@ import NavbarHome from './componentes/NavbarHome';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import NavBarCards from './componentes/NavBarCards';
 import Footer from './componentes/Footer';
+import { CartProvider } from './context/CartContext';
+
 
 
 function App() {
   return (
-    <div className="App">
-    <BrowserRouter>
-    <NavbarHome/>
+   <CartProvider>
+     <BrowserRouter>
+      <NavbarHome/>
     <NavBarCards></NavBarCards>
-    <Switch>
-    <Route exact path="/">
-      <ItemListContainer/>  
+     <Switch>
+      <Route exact path="/">
+       <ItemListContainer/>  
       </Route>
       <Route exact path="/category/:catId">
-      <ItemListContainer/>  
+       <ItemListContainer/>  
       </Route>
       <Route exact path="/productDetail">
-      <ItemDetailContainer/>
+       <ItemDetailContainer/>
       </Route>
       <Route exact path="/productDetail/:pId">
-      <ItemDetailContainer/>
+       <ItemDetailContainer/>
       </Route>
       <Route exact path="/productDetail/card">
-      <ItemDetailContainer/>
+       <ItemDetailContainer/>
       </Route>
-    </Switch>
-    <Footer></Footer>
-    </BrowserRouter>  
-    </div>
+     </Switch>
+     <Footer></Footer>
+     </BrowserRouter>  
+   </CartProvider>
   );
 }
 
