@@ -14,7 +14,7 @@ return (
             pId= {i.id}
             cat={i.category}
             price= {i.price}
-            key={i.id} 
+            id={i.id} 
             >
             </Item>
         )

@@ -2,23 +2,22 @@ import React, {useState} from 'react';
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
 import {Link} from 'react-router-dom'
-//import { useCart} from '../context/CartContext';
+import { useCart} from '../context/CartContext';
 
 
 
-export default function ItemDetail({img, title, price, desc}) {
-  //const {cartInfo, addItem, removeItem, clear, isInCart} = useCart()
- // console.log(cartInfo, addItem, removeItem, clear, isInCart)
+export default function ItemDetail({img, title, price, desc, id}) {
+  const [eventItem, setEventItem] = useState (0);
+  const {cartInfo, addItem} = useCart()
 
- /// const addProduct = () => {
- //   cartInfo.addItem ( {item: {title}, quantity: {setEventItem}, price:{price}} )
- // }
- //onClick={addProduct} 
-
-const [eventItem, setEventItem] = useState (0);
 const onAddItem = (e) => {
 setEventItem(e)
+addItem(title, img, e, price, id)
 }
+
+//const addProduct = (e) => {
+//  addItem(title, img, e, price, id)
+//}onClick={addProduct} 
 
   return (
       <div>
@@ -31,7 +30,7 @@ setEventItem(e)
            <p> Cantidad: </p>
            { eventItem ===0?
            <ItemCount value={eventItem} onAdd={onAddItem} stock={5} initial={1}> </ItemCount> : <div className="buttons-item-detail">
-            <Link to="/productDetail/card"> <button className="button-item-detail">Lo llevo</button> </Link>
+            <Link to="/productDetail/card"> <button  className="button-item-detail">Lo llevo</button> </Link>
              <button className="icon-item-detail"><i class="far fa-heart"></i></button>
            </div>
            }
