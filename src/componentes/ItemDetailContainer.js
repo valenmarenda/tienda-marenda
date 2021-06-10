@@ -30,7 +30,8 @@ return(
          img={it.img}
          price={it.price}
          key={it.id}
-         desc={it.desc}>
+         desc={it.desc}
+         id= {it.id} >
       </ItemDetail>
       
       )
