@@ -24,16 +24,27 @@ export const CartProvider = ({children}) => {
         setCartInfo({ ...cartInfo, items: newItem})
 
     }
-    const removeItem = ()=>{
+    
+    const removeItems = (item )=>{
+        const cartWithoutItem = cartInfo.items.filter ((remove) => remove.id !== item.id) 
+        setCartInfo({...cartInfo, items: cartWithoutItem})
+        
+     }
+    
 
-    }
     const clear = () => {
         setCartInfo(initialState)
     }
-    console.log(cartInfo)
+
+    const totalPrice = (price) => {
+      //cartInfo.items.item.price.forEach(price => {
+          
+     // });
+    }
+   
     
     return(
-        <CartContext.Provider value={{cartInfo, addItem, removeItem, clear}}>{children} </CartContext.Provider>
+        <CartContext.Provider value={{cartInfo, addItem, removeItems, clear}}>{children} </CartContext.Provider>
     );
 };
 

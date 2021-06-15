@@ -30,7 +30,7 @@ addItem(title, img, e, price, id)
            <p> Cantidad: </p>
            { eventItem ===0?
            <ItemCount value={eventItem} onAdd={onAddItem} stock={5} initial={1}> </ItemCount> : <div className="buttons-item-detail">
-            <Link to="/productDetail/card"> <button  className="button-item-detail">Lo llevo</button> </Link>
+            <Link to="/cart"> <button  className="button-item-detail">Lo llevo</button> </Link>
              <button className="icon-item-detail"><i class="far fa-heart"></i></button>
            </div>
            }

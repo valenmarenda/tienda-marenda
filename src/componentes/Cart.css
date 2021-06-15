@@ -1,0 +1,21 @@
+.container-cart{
+    margin: 3rem
+}
+
+.cart-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.container-cardContenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.container-cardContenido img{
+    width: 5rem;
+}

@@ -8,6 +8,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import NavBarCards from './componentes/NavBarCards';
 import Footer from './componentes/Footer';
 import { CartProvider } from './context/CartContext';
+import Cart from './componentes/Cart'
 
 
 
@@ -30,8 +31,8 @@ function App() {
       <Route exact path="/productDetail/:pId">
        <ItemDetailContainer/>
       </Route>
-      <Route exact path="/productDetail/card">
-       <ItemDetailContainer/>
+      <Route exact path="/cart">
+       <Cart/>
       </Route>
      </Switch>
      <Footer></Footer>

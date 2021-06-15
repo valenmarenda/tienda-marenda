@@ -2,7 +2,6 @@ import Item from "./Item"
 import './ItemList.css'
 
 const ItemList = (itemContent, index) => {
-
 return (
 <div className="cards-container">
     
