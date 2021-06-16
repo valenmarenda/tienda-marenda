@@ -15,9 +15,6 @@ setEventItem(e)
 addItem(title, img, e, price, id)
 }
 
-//const addProduct = (e) => {
-//  addItem(title, img, e, price, id)
-//}onClick={addProduct} 
 
   return (
       <div>

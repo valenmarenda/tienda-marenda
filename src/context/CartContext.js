@@ -25,10 +25,10 @@ export const CartProvider = ({children}) => {
 
     }
     
-    const removeItems = (item )=>{
-        const cartWithoutItem = cartInfo.items.filter ((remove) => remove.id !== item.id) 
+    const removeItems = (item)=>{
+        const cartWithoutItem = cartInfo.items.filter ((remove) => {
+        return remove.item.id !== item.id}) 
         setCartInfo({...cartInfo, items: cartWithoutItem})
-        
      }
     
 
@@ -36,15 +36,18 @@ export const CartProvider = ({children}) => {
         setCartInfo(initialState)
     }
 
-    const totalPrice = (price) => {
-      //cartInfo.items.item.price.forEach(price => {
-          
-     // });
+    const totalQuantity=()=>{
+        const sumaquantity = cartInfo.items.reduce((counter, item)=> (counter + item.quantity) , 0)
+        return sumaquantity 
     }
-   
-    
+
+    const totalPrice = () => {
+        const sumaPrices = cartInfo.items.reduce((counter, item)=> (counter + item.item.price * item.quantity) , 0)
+        return sumaPrices
+     }
+
     return(
-        <CartContext.Provider value={{cartInfo, addItem, removeItems, clear}}>{children} </CartContext.Provider>
+        <CartContext.Provider value={{cartInfo, addItem, removeItems, clear, totalPrice, totalQuantity }}>{children} </CartContext.Provider>
     );
 };
 

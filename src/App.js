@@ -9,6 +9,7 @@ import NavBarCards from './componentes/NavBarCards';
 import Footer from './componentes/Footer';
 import { CartProvider } from './context/CartContext';
 import Cart from './componentes/Cart'
+import CartWidget from './componentes/CartWidget'
 
 
 
@@ -33,6 +34,9 @@ function App() {
       </Route>
       <Route exact path="/cart">
        <Cart/>
+      </Route>
+      <Route exact path="/cart">
+       <CartWidget/>
       </Route>
      </Switch>
      <Footer></Footer>

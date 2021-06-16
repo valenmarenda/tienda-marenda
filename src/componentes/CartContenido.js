@@ -11,10 +11,14 @@ export default function CartContenido({item, quantity}){
 
     const remover =(item)=>{
         removeItems(item)
-        console.log(item)
         }
 
+
     return (
+        <>
+        {quantity === 0? (
+            <h1>No hay productos agregados</h1>
+        ): (
         <>
         <div className="container-cardContenido">
         <img src={item.img} alt="Imagen artículo"></img>
@@ -25,6 +29,8 @@ export default function CartContenido({item, quantity}){
        </div>
        <button onClick={()=>remover(item)}>Borrar</button>
        <button>Editar</button>
+        </>
+        )}
         </>
     )
 }

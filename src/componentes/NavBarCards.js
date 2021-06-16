@@ -28,7 +28,7 @@ return (
 
 <div className="navbarCards-icons">
       <button className="icon-navbar"><i className="far fa-heart"></i></button> <h3>Lista de deseos</h3>
-       <Cartwidget/> <h3>Carrito</h3>
+       <Cartwidget/> 
       </div>
 
 </div>
