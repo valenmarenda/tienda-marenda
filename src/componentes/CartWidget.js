@@ -1,10 +1,9 @@
 import { useCart} from '../context/CartContext';
-
+import {Link} from 'react-router-dom'
 
 const Cartwidget = () => {
 
   const cartInfo = useCart()
-  const cantidadItems = cartInfo.cartInfo.items
   const {totalQuantity}= useCart()
 
 
@@ -16,8 +15,9 @@ const Cartwidget = () => {
 if (cartInfo.cartInfo.items.length === 0) return <h1> carrito vacío</h1>
   return (
      <>
-
-    <button className="icon-navbar"><i className="fas fa-shopping-bag"></i>carrito <h1> {totalQuantitys()} </h1></button>
+     <Link to="/cart">
+    <button className="icon-navbar"><i className="fas fa-shopping-bag"></i>carrito <p> {totalQuantitys()} </p></button>
+    </Link>
     </>
   )
 };

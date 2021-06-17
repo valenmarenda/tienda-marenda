@@ -103,12 +103,11 @@
     font-size: 2.5rem;
     font-family: 'Bebas Neue', cursive;
     color: #fff;
-
   }
-
 
   .icon-navbar button{
     margin-right: 1.2rem ;
+    
   }
 nav .nav-suscribe{
   display: flex;

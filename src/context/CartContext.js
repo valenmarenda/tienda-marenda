@@ -17,7 +17,7 @@ export const CartProvider = ({children}) => {
                 ...cartInfo.items.slice(itemIndex+1) ]}));
         }
         else {
-            setCartInfo({ ...cartInfo, items: [ ...cartInfo.items, { "item": { img, id, price }, quantity } ]})
+            setCartInfo({ ...cartInfo, items: [ ...cartInfo.items, { "item": { img, id, price, desc }, quantity } ]})
         }
         
         const newItem = [...cartInfo.items, {item: {id, price, desc, img}, quantity}]

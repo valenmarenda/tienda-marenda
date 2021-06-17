@@ -6,17 +6,16 @@ import {Link} from 'react-router-dom'
 
 export default function Cart(){
     const cartInfo = useCart()
-    const {clear} = useCart()
-    const {totalPrice}= useCart()
+   // const {clear, totalPrice} = useCart()
     const cartitems = cartInfo.cartInfo.items
     
 
 const clearProducts = () => {
-    clear()
+    cartInfo.clear()
 }
 
 const totalPriceItems= ()=>{
-return totalPrice() 
+return cartInfo.totalPrice() 
 }
 
 

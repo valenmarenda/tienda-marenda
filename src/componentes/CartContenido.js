@@ -28,7 +28,7 @@ export default function CartContenido({item, quantity}){
        <h1> <spam>$</spam> {totalPriceProduct} </h1>
        </div>
        <button onClick={()=>remover(item)}>Borrar</button>
-       <button>Editar</button>
+       
         </>
         )}
         </>
