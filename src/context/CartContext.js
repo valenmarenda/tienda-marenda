@@ -9,18 +9,18 @@ const initialState = {items: [], totalPrice:0}
 export const CartProvider = ({children}) => {
     const [cartInfo, setCartInfo]= useState(initialState);
 
-    const addItem = (desc, img,  quantity, price, id) =>{
+    const addItem = (desc, img,  quantity, price, id, stock) =>{
         const itemIndex = cartInfo.items.findIndex(i => id === i.item.id)
         if (itemIndex !== -1){
             return( setCartInfo({ ...cartInfo, items: [ ...cartInfo.items.slice(0,itemIndex), 
-                { "item": { img, id, price }, "quantity":cartInfo.items[itemIndex].quantity + quantity }, 
+                { "item": { img, id, price, stock }, "quantity":cartInfo.items[itemIndex].quantity + quantity }, 
                 ...cartInfo.items.slice(itemIndex+1) ]}));
         }
         else {
-            setCartInfo({ ...cartInfo, items: [ ...cartInfo.items, { "item": { img, id, price, desc }, quantity } ]})
+            setCartInfo({ ...cartInfo, items: [ ...cartInfo.items, { "item": { img, id, price, desc, stock }, quantity } ]})
         }
         
-        const newItem = [...cartInfo.items, {item: {id, price, desc, img}, quantity}]
+        const newItem = [...cartInfo.items, {item: {id, price, desc, img, stock}, quantity}]
         setCartInfo({ ...cartInfo, items: newItem})
 
     }

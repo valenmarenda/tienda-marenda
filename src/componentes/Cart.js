@@ -2,14 +2,13 @@ import React from 'react';
 import { useCart} from '../context/CartContext';
 import CartContenido from '../componentes/CartContenido';
 import './Cart.css'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 
 export default function Cart(){
     const cartInfo = useCart()
-   // const {clear, totalPrice} = useCart()
     const cartitems = cartInfo.cartInfo.items
-    
-
+console.log(cartitems)
 const clearProducts = () => {
     cartInfo.clear()
 }
@@ -18,8 +17,8 @@ const totalPriceItems= ()=>{
 return cartInfo.totalPrice() 
 }
 
-
     return(
+        <div> 
         <div className="container-cart">
             {cartInfo.cartInfo.items.length === 0? (
             <h1>No hay productos agregados</h1>
@@ -36,17 +35,12 @@ return cartInfo.totalPrice()
        <div className="">
         {cartitems?.map(i => {
        return (
-           <>
          <CartContenido
            item={i.item}
            quantity={i.quantity}
-
            >
           </CartContenido>
-          
-          </>
       )
-      
   })} 
      </div>
 
@@ -60,6 +54,22 @@ return cartInfo.totalPrice()
      </div>
      
         
+     </div>
+     
+     <div> 
+         <h2>Resumen de compras</h2>
+         <p>Subtotal</p> 
+         <p>$ {totalPriceItems()}</p>
+         <p>Envío (retiro por sucursal)</p>
+         <p>$ 0.00</p>
+         <p>Total del pedido</p>
+         <p>$ {totalPriceItems()}</p>
+         <Link to="/cart/CheckOut">
+         <button >Realizar pedido</button>
+         </Link>
+         
+         
+     </div>
      </div>
  )
 }

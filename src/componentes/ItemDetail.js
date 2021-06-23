@@ -12,7 +12,7 @@ export default function ItemDetail({img, title, price, desc, id, stock}) {
 
 const onAddItem = (e) => {
 setEventItem(e)
-addItem(title, img, e, price, id)
+addItem(title, img, e, price, id, stock)
 }
 
 
