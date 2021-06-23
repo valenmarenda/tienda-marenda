@@ -1,5 +1,9 @@
 .container-checkOut{
     margin-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5rem;
+    width: 100%
 }
 
 .container-checkOut img{

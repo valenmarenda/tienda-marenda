@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 export default function Cart(){
     const cartInfo = useCart()
     const cartitems = cartInfo.cartInfo.items
-console.log(cartitems)
+
 const clearProducts = () => {
     cartInfo.clear()
 }

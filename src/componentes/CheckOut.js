@@ -22,7 +22,7 @@ const stock = itemProduct.map((i)=>{return (i.stock)})
 
     return (
         <div className="container-checkOut">
-            <FormUser value= {{itemProduct, stock}} ></FormUser>
+        <div> 
         <div className="container-compra">
         <h1>Resumen de compra</h1>
         <div>
@@ -39,6 +39,10 @@ const stock = itemProduct.map((i)=>{return (i.stock)})
             })}
         </div>
         <p>Precio total: {totalPriceItems()} </p>
+        </div>
+        </div>  
+        <div>
+        <FormUser value= {{itemProduct, stock}} ></FormUser>
         </div>
         </div>
     )
