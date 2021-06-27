@@ -7,7 +7,6 @@ export default function CheckOut (){
     const cartInfo = useCart()
     const cartitems = cartInfo.cartInfo.items
 
-
    const totalPriceItems= ()=>{
    return cartInfo.totalPrice() 
    }
@@ -18,15 +17,19 @@ export default function CheckOut (){
 
 //map de item//
 const itemProduct = cartitems.map((i)=>{return (i.item)})
+
+//const itemQuantity = cartitems.map((i)=>{return ( i.quantity + i.item)})
 const stock = itemProduct.map((i)=>{return (i.stock)})
+
+
 
     return (
         <div className="container-checkOut">
-        <div> 
-        <div className="container-compra">
-        <h1>Resumen de compra</h1>
-        <div>
-        <p> {totalQuantitys()} productos en el carrito </p>
+         <div> 
+          <div className="container-compra">
+            <h1>Resumen de compra</h1>
+             <div>
+              <p> {totalQuantitys()} productos en el carrito </p>
             {cartitems?.map((i)=>{
                 return (
                     <>
@@ -37,13 +40,13 @@ const stock = itemProduct.map((i)=>{return (i.stock)})
                     </>
                 )
             })}
-        </div>
-        <p>Precio total: {totalPriceItems()} </p>
-        </div>
-        </div>  
-        <div>
-        <FormUser value= {{itemProduct, stock}} ></FormUser>
-        </div>
+             </div>
+             <p>Precio total: {totalPriceItems()} </p>
+         </div>
+         </div>  
+           <div>
+            <FormUser value= {{itemProduct, stock}} ></FormUser>
+           </div>
         </div>
     )
 }

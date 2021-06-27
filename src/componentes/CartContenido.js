@@ -23,9 +23,9 @@ export default function CartContenido({item, quantity}){
         <div className="container-cardContenido">
         <img src={item.img} alt="Imagen artículo"></img>
        <h1> {item.desc} </h1> 
-       <p> <spam>$</spam> {price} </p>
+       <p> $ {price} </p>
        <p> {quantity} </p>
-       <h1> <spam>$</spam> {totalPriceProduct} </h1>
+       <h1> ${totalPriceProduct} </h1>
        </div>
        <button onClick={()=>remover(item)}>Borrar</button>
        

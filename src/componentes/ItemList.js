@@ -14,6 +14,7 @@ return (
             cat={i.category}
             price= {i.price}
             id={i.id} 
+            key={i.id}
             >
             </Item>
         )

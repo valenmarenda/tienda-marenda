@@ -94,7 +94,7 @@ export default function ItemDetailInfo(desc) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} >
-         <p>  Detalle ver si se puede agregar el mismo detalle que en el item</p> 
+        
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <h3>Pagos a través de</h3>

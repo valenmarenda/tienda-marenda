@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { getFireStore} from '../firebase/firebase';
 import { useCart} from '../context/CartContext';
+import {Link} from 'react-router-dom';
 
-const FormUser = (itemProduct, stock) => {
+const FormUser = (itemProduct, stock ) => {
    const [orderId, setOrderId] = useState([]);
     const [loading, setLoading]= useState();
     
@@ -35,6 +36,8 @@ const FormUser = (itemProduct, stock) => {
              email: datos.email
          }
       //Crea la orden para firebase//
+
+
     const db = getFireStore();
     const ordenes = db.collection("ordenes");
     const newOrden = { 
@@ -43,19 +46,15 @@ const FormUser = (itemProduct, stock) => {
      date:new Date().getTime(),
       total: totalPriceItems()
      }
+
     //Enviar la orden a Firebase//
     ordenes.add(newOrden).then(({id})=>{
      setOrderId(id); 
      }).finally(()=>{
    setLoading(false)
-   console.log(stock)
- //  const docRef = db.collection('items').doc(itemId);
- //  const actualizarStock = docRef.update({
- //     stock: stock - stockOrder
- // })
     })
     }
-
+    
 
     return (
         <>
@@ -72,6 +71,21 @@ const FormUser = (itemProduct, stock) => {
                 </div>
                 <button type="submit" onClick={enviarDatos} className="btn btn-primary">Enviar</button>
             </form> 
+            <div >
+            {orderId.length > 0 &&
+            <>
+            <h2>Muchas gracias por tu compra,</h2>
+            <p>
+              Tu nro de orden es: {orderId}. Recirá un email cuando su pedido esté listo para ser retirado. 
+            </p>
+            <Link to="/">
+            <button>Volver al inicio</button>
+            </Link>
+        </>
+      }
+                
+                
+            </div>
 
         </>
     );

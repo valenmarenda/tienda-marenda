@@ -11,6 +11,7 @@ import { CartProvider } from './context/CartContext';
 import Cart from './componentes/Cart'
 import CartWidget from './componentes/CartWidget'
 import CheckOut from './componentes/CheckOut'
+import UserCheckOut from './componentes/UserCheckOut'
 
 
 
@@ -41,6 +42,9 @@ function App() {
       </Route>
       <Route exact path="/cart/CheckOut">
         <CheckOut></CheckOut>
+      </Route>
+      <Route exact path="/cart/CheckOut/userCheckOut">
+        <UserCheckOut></UserCheckOut>
       </Route>
      </Switch>
      <Footer></Footer>
