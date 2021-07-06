@@ -1,14 +1,40 @@
-import React, {useState, createContext, useContext} from 'react';
+import React, {useState, createContext, useContext, useEffect,} from 'react';
 
 export const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 
 const initialState = {items: [], totalPrice:0}
+const initialStateWish = {items:[]}; 
 
 export const CartProvider = ({children}) => {
-    const [cartInfo, setCartInfo]= useState(initialState);
 
+    function setLocalStorage(key, value) {
+        try {
+          window.localStorage.setItem(key, JSON.stringify(value));
+        } catch (e) {
+          // catch possible errors:
+          // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+        }
+      }
+      
+      function getLocalStorage(key, initialValue) {
+        try {
+          const value = window.localStorage.getItem(key);
+          return value ? JSON.parse(value) : initialValue;
+        } catch (e) {
+          // if error, return initial value
+          return initialValue;
+        }
+      }
+
+    const [cartInfo, setCartInfo]= useState(() => getLocalStorage("cartInfo", initialState));
+    const [wishList, setWishList] = useState(initialStateWish)
+     
+    useEffect(() => {
+        setLocalStorage("cartInfo", cartInfo);
+      }, [cartInfo]);
+    
     const addItem = (desc, img,  quantity, price, id, stock) =>{
         const itemIndex = cartInfo.items.findIndex(i => id === i.item.id)
         if (itemIndex !== -1){
@@ -24,7 +50,24 @@ export const CartProvider = ({children}) => {
         setCartInfo({ ...cartInfo, items: newItem})
 
     }
-    
+
+    const addWishList = (desc, img, price, id) =>{
+      const itemIndex = wishList.items.findIndex(i => id === i.item.id)
+      if (itemIndex !== -1){
+          return( setWishList({ ...wishList, items: [ ...wishList.items.slice(0,itemIndex), 
+              { "item": { img, id, price } }, 
+              ...wishList.items.slice(itemIndex+1) ]}));
+      }
+      else {
+          setWishList({ ...wishList, items: [ ...wishList.items, { "item": { img, id, price, desc } } ]})
+      }
+      
+      const newItem = [...wishList.items, {item: {id, price, desc, img}}]
+      setWishList({ ...wishList, items: newItem})
+
+  }
+
+    console.log(wishList)
     const removeItems = (item)=>{
         const cartWithoutItem = cartInfo.items.filter ((remove) => {
         return remove.item.id !== item.id}) 
@@ -46,8 +89,10 @@ export const CartProvider = ({children}) => {
         return sumaPrices
      }
 
+
+
     return(
-        <CartContext.Provider value={{cartInfo, addItem, removeItems, clear, totalPrice, totalQuantity }}>{children} </CartContext.Provider>
+        <CartContext.Provider value={{cartInfo, addItem, removeItems, clear, totalPrice, totalQuantity, addWishList} }>{children} </CartContext.Provider>
     );
 };
 

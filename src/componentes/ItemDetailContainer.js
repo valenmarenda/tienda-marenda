@@ -10,8 +10,7 @@ import { getFireStore} from '../firebase/firebase'
 function ItemDetailContainer(){
   const [itemDetail, setItemDetail] = useState([]);
   const { pId } = useParams();
-
-
+  
   useEffect(()=>{
   const db= getFireStore();
   const itemCollection = db.collection("items");
@@ -31,9 +30,10 @@ function ItemDetailContainer(){
      })
      
    },[pId]);
-
-
+   
 return(
+  <>
+  {itemDetail.length === 0 && <h1>No existe el item</h1>}
   <div>
    {itemDetail?.map(it=>{
     return(
@@ -50,10 +50,12 @@ return(
     )
    })}
 
+
      <div className="item-detail-info-container">
-     <ItemDetailInfo> </ItemDetailInfo>
+     <ItemDetailInfo></ItemDetailInfo>
     </div>
    </div>
+   </>
 )
 }
 

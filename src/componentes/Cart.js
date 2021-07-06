@@ -5,9 +5,12 @@ import './Cart.css'
 import {Link} from 'react-router-dom';
 
 
+
 export default function Cart(){
+
     const cartInfo = useCart()
     const cartitems = cartInfo.cartInfo.items
+    
 
 const clearProducts = () => {
     cartInfo.clear()
@@ -16,6 +19,8 @@ const clearProducts = () => {
 const totalPriceItems= ()=>{
 return cartInfo.totalPrice() 
 }
+
+
 
     return(
         <div> 
@@ -35,7 +40,7 @@ return cartInfo.totalPrice()
        <div className="">
         {cartitems?.map(i => {
        return (
-         <CartContenido
+         <CartContenido  
            item={i.item}
            quantity={i.quantity}
            >

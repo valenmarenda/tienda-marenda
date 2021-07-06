@@ -57,9 +57,9 @@ export default function Item({img, title, price, cat, pId}) {
           </Typography>
         </CardContent>
       <CardActions className="card-container-buttons">
-        
+      <Link  to={`/productDetail/${pId}`}>
         <button className="icon-item-detail-shopping"><i className="fas fa-shopping-cart"></i></button>
-        
+      </Link>
         
         <button className="icon-item-detail"><i className="far fa-heart"></i></button>
         

@@ -35,12 +35,13 @@ class NavbarHome extends Component {
         </div>
         </Link>
       </div>
-      <Link to="/">
+      <Link to="/register">
         <div className="nav-suscribe">
         <i className="far fa-edit"></i>
-        <h3>Registrate</h3>
+        <h3>Suscribite</h3>
         </div>
         </Link>
+        
 
       </nav>
 

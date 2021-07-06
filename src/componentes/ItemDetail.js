@@ -8,13 +8,18 @@ import { useCart} from '../context/CartContext';
 
 export default function ItemDetail({img, title, price, desc, id, stock}) {
   const [eventItem, setEventItem] = useState (0);
-  const { addItem} = useCart()
+
+  const { addItem, addWishList} = useCart()
 
 const onAddItem = (e) => {
 setEventItem(e)
 addItem(title, img, e, price, id, stock)
 }
 
+const handleClick =(e) => {
+
+  addWishList(title, img, e, price, id)
+}
 
   return (
       <div>
@@ -28,9 +33,10 @@ addItem(title, img, e, price, id, stock)
            { eventItem ===0?
            <ItemCount value={eventItem} onAdd={onAddItem} stock={stock} initial={1}> </ItemCount> : <div className="buttons-item-detail">
             <Link to="/cart"> <button  className="button-item-detail">Lo llevo</button> </Link>
-             <button className="icon-item-detail"><i class="far fa-heart"></i></button>
+             
            </div>
            }
+           <button className="icon-item-detail" onClick={handleClick} ><i class="far fa-heart"></i></button>
          </div>
        </div>
       </div>

@@ -1,0 +1,69 @@
+.icon-navbar p{
+    font-size: 1.2rem;
+
+}
+
+.button-carrito{
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+padding-right: 1rem;
+column-gap: 0.5rem ;
+
+}
+
+.MuiButton-label{
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    
+}
+.MuiMenu-list{
+    border: 1px solid #3AB3C4;
+    border-radius: 10px;
+    
+}
+
+.linea-carrito{
+    border-left: 1px solid #3AB3C4;
+    padding-left: 1rem;
+}
+
+.navBar-card{
+   display: flex;
+   flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.2rem;
+   width: 17rem;
+   padding: 1rem;
+}
+
+
+.navBar-card .btn{
+    font-size: 2rem;
+    margin: 1rem;
+
+    
+}
+.navBarCard-btn{
+    margin-right: auto;
+    margin-left: auto;
+    bottom:0;
+}
+
+.navBarCard-ItemsAdd{
+    display: flex;
+    flex-direction: row;
+}
+
+.navBarCard-totalPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body {
+    padding-right: 0!important;
+}

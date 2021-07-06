@@ -14,6 +14,7 @@
     background-color: #fff;
     z-index: 100;
     padding: 1rem 0;
+    height: 15rem;
 }
 
 
@@ -44,7 +45,7 @@ height: 4rem;
     justify-content: space-around;
 } 
 
-.navBarCards-btn button{
+.btn{
     font-size: 2.5rem;
     font-family: 'Bebas Neue', cursive;
     padding: 0.5rem;
@@ -55,7 +56,7 @@ height: 4rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
 }
-.navBarCards-btn button:hover{
+.btn:hover{
     color: #000000;
     box-shadow: 2px 1px 1px rgb(192, 188, 188);
     transition: 1s;
@@ -74,6 +75,7 @@ height: 4rem;
   }
 
   .navbarCards-icons{
+      font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: row;
       align-content: center;
@@ -81,10 +83,6 @@ height: 4rem;
       margin-right: 1rem;
   }
 
-  .navbarCards-icons h3{
-      font-size: 2rem;
-      font-weight: lighter;
-    }
 
     @media (min-width: 678px){
         .NavBarCards-container{
@@ -94,6 +92,9 @@ height: 4rem;
             align-items: center;
             justify-content: space-between;
             justify-items: center;
+            height: 4rem;
+            padding-right: 3rem;
+            padding-left: 3rem;
         }
     
         .searchItems-container {

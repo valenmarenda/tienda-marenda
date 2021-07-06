@@ -17,11 +17,7 @@ export default function CheckOut (){
 
 //map de item//
 const itemProduct = cartitems.map((i)=>{return (i.item)})
-
-//const itemQuantity = cartitems.map((i)=>{return ( i.quantity + i.item)})
-const stock = itemProduct.map((i)=>{return (i.stock)})
-
-
+const itemQuantity = cartitems.map((i)=>{return ( i)})
 
     return (
         <div className="container-checkOut">
@@ -45,7 +41,7 @@ const stock = itemProduct.map((i)=>{return (i.stock)})
          </div>
          </div>  
            <div>
-            <FormUser value= {{itemProduct, stock}} ></FormUser>
+            <FormUser value= {{itemProduct, itemQuantity}} ></FormUser>
            </div>
         </div>
     )
