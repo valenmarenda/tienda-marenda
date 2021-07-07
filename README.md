@@ -6,7 +6,7 @@ Es una e-commmers para la venta de productos de belleza.
 
 -Registro de usuarios: con campos validados al realizar el registro.
 
--Filtro por categorías con botones: tomando las categorías de la base de datos se generan filtros de productos.
+-Filtro por categorías con botones: tomando las categorías de la base de datos (firebase) se generan filtros de productos.
 
 -Carrito: cuenta con una vista de los productos agregados al carrito, con precio e imagen, donde se pueden agregar o eliminar items.
 
