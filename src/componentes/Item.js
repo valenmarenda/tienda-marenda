@@ -22,6 +22,7 @@ const useStyles = makeStyles({
 
 export default function Item({img, title, price, cat, pId}) {
   const classes = useStyles();
+  
 
   return (
     <>

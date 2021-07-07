@@ -7,12 +7,11 @@ import { getFireStore} from '../firebase/firebase';
 
 export default function Register(){
     const [user, setUser] = useState([]);
-    const [loading, setLoading]= useState();
+    
     const { register, handleSubmit, formState: { errors }} = useForm();
 
     const onSubmit = (data, e) => {
       JSON.stringify(data);
-      console.log(data)
       e.target.reset();
 
      //Crea la orden para firebase//
@@ -26,7 +25,7 @@ export default function Register(){
     users.add(newUser).then(({id})=>{
      setUser(id); 
      }).finally(()=>{
-   setLoading(false)
+   
     })
     
     };

@@ -28,12 +28,12 @@ const itemQuantity = cartitems.map((i)=>{return ( i)})
               <p> {totalQuantitys()} productos en el carrito </p>
             {cartitems?.map((i)=>{
                 return (
-                    <>
+                    <div key= {i.item.id} >
                     <img src= {i.item.img} alt="imagen item"></img>
                     <p> {i.item.desc} </p>
                     <p>Precio: {i.item.price} </p>
                     <p>Cantidad: {i.quantity} </p>
-                    </>
+                    </div>
                 )
             })}
              </div>

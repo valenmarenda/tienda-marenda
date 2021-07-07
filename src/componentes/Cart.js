@@ -43,6 +43,7 @@ return cartInfo.totalPrice()
          <CartContenido  
            item={i.item}
            quantity={i.quantity}
+           key={i.item.id}
            >
           </CartContenido>
       )

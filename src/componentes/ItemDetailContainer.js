@@ -37,6 +37,7 @@ return(
   <div>
    {itemDetail?.map(it=>{
     return(
+      <>
       <ItemDetail
       title={it.title}
        img={it.img}
@@ -46,14 +47,16 @@ return(
        id= {it.id}
        stock={it.stock}>
      </ItemDetail>
-      
+           <div className="item-detail-info-container">
+           <ItemDetailInfo desc={it.desc} key={it.id}></ItemDetailInfo>
+          </div>
+          </>
     )
+    
    })}
 
 
-     <div className="item-detail-info-container">
-     <ItemDetailInfo></ItemDetailInfo>
-    </div>
+
    </div>
    </>
 )

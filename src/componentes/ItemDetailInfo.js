@@ -7,10 +7,12 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import './ItemDetailInfo.css';
+import pagos from '../componentes/img/pagos.jpg';
 
 
 
-function TabPanel(props, ) {
+function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -45,7 +47,6 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: '#3AB3C4',
     width: 700,
     border: 0,
     marginLeft: 10,
@@ -58,10 +59,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function ItemDetailInfo(desc) {
-  const classes = useStyles();
+export default function ItemDetailInfo(desc, key) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const descProduct = desc.desc
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -72,7 +73,8 @@ export default function ItemDetailInfo(desc) {
   };
 
   return (
-    <div className={classes.root} >
+    <div key={key} className="container-detailInfo"  >
+      
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -94,12 +96,14 @@ export default function ItemDetailInfo(desc) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} >
-        
+        {descProduct} Ideal para todo tipo de piel. 
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
+          <div className="container-pagos">
           <h3>Pagos a través de</h3>
-
+          <img src={pagos} alt="pagoslogos"></img>
           <h3>Con tarjetas de crédito</h3>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <h3>TIPO DE ENVIO	CAPITAL FEDERAL Y GBA	RESTO DEL PAÍS	COMPRAS MAYORES A $4000

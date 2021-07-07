@@ -8,8 +8,6 @@ import { useForm } from 'react-hook-form'
 
 const FormUser = (itemProduct) => {
    const [orderId, setOrderId] = useState([]);
-    const [loading, setLoading]= useState();
-    
 
     //Datos del carrito//
     const cartInfo = useCart();
@@ -31,7 +29,7 @@ const FormUser = (itemProduct) => {
          e.target.reset()
          e.preventDefault()
          const buyer = data
-         console.log(buyer)
+
       //Crea la orden para firebase//
     const db = getFireStore();
     const ordenes = db.collection("ordenes");
@@ -45,8 +43,9 @@ const FormUser = (itemProduct) => {
     //Enviar la orden a Firebase//
     ordenes.add(newOrden).then(({id})=>{
      setOrderId(id); 
+
      }).finally(()=>{
-   setLoading(false)
+
     })
 
         //Actualizar stock
@@ -110,7 +109,7 @@ const FormUser = (itemProduct) => {
               Tu nro de orden es: {orderId}. Recirá un email cuando su pedido esté listo para ser retirado. 
             </p>
             <Link to="/">
-            <button onClick={removerItem()}>Volver al inicio</button>
+            <button className="btn" onClick={removerItem()}>Volver al inicio</button>
             </Link>
             
         </>

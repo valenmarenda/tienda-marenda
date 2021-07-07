@@ -8,6 +8,7 @@ export default function CartContenido({item, quantity}){
     const price = item.price
     const totalPriceProduct =  price * quantity; 
     const {removeItems} = useCart()
+    
 
     const remover =(item)=>{
         removeItems(item)

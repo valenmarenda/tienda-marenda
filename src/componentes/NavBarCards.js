@@ -2,14 +2,19 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 import './NavbarCards.css';
 import AcordionNavBar from './AcordionNavBar'
+import CartwidgetWishList from './CartWidgetWishList'
 
 const NavBarCards = () => {
 return (
 <div className="NavBarCards-container">
+  <Link to="/cartwishlist">
 <div className="navbarCards-icons">
-     <i className="far fa-heart"></i> <div className="linea-carrito"><p>Lista de deseos</p></div>
+     <i className="far fa-heart"></i> 
+     <CartwidgetWishList/>
+     <div className="linea-carrito"><p>Lista de deseos</p></div>
      
-      </div>
+</div>
+</Link>
 <div className="navBarCards-btn">
       <Link to="/">
         <button className=" btn categoria">Todos</button>

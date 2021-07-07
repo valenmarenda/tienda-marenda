@@ -12,6 +12,7 @@ import Cart from './componentes/Cart'
 import CartWidget from './componentes/CartWidget'
 import CheckOut from './componentes/CheckOut'
 import Register from './componentes/Register'
+import CartWishList from './componentes/CartWishList'
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
       </Route>
       <Route exact path="/cart">
        <CartWidget/>
+      </Route>
+      <Route exact path="/cartwishlist">
+       <CartWishList/>
       </Route>
       <Route exact path="/cart/CheckOut">
         <CheckOut></CheckOut>

@@ -16,9 +16,9 @@ setEventItem(e)
 addItem(title, img, e, price, id, stock)
 }
 
-const handleClick =(e) => {
+const handleClick =() => {
 
-  addWishList(title, img, e, price, id)
+  addWishList(title, price, img, id, desc)
 }
 
   return (
@@ -36,7 +36,7 @@ const handleClick =(e) => {
              
            </div>
            }
-           <button className="icon-item-detail" onClick={handleClick} ><i class="far fa-heart"></i></button>
+           <button className="icon-item-detail" onClick={handleClick} ><i className="far fa-heart"></i></button>
          </div>
        </div>
       </div>

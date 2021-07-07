@@ -75,7 +75,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 200;
-    width: 25%;
+    width: 35%;
     height: 85vh;
     }
 
@@ -128,7 +128,14 @@ nav .nav-suscribe{
   color: #0d181a;
   transition: 1s;
 }
-
+.NavbarItems button {
+background-color: transparent;
+border: none;
+font-size: 3rem;
+color: #fff;
+font-family: 'Bebas Neue', cursive;
+margin-bottom: 3rem;
+}
 
 
 
