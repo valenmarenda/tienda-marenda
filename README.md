@@ -48,7 +48,7 @@ Es una e-commmers para la venta de productos de belleza.
 -Uso de React Hook Form para formularios​
 ​
 ### Aplicación en funcionamiento 🛠️
-![Tienda-Marenda](https://user-images.githubusercontent.com/77030740/120401987-79334780-c317-11eb-88bb-1adaa1ec9e69.gif)
+![Tienda - Google Chrome 2021-07-07 19-20-56](https://user-images.githubusercontent.com/77030740/124836869-1d815d00-df5a-11eb-8a18-bc0622167e87.gif)
 
 
 ### Autora ✒️
