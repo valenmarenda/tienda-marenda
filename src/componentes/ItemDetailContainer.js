@@ -38,7 +38,6 @@ function ItemDetailContainer(){
    },[pId]);
    
    
-   
 return(
   <div className="container-itemDetails">
   <div className="container-spinner">
@@ -55,8 +54,7 @@ return(
   </div>
   </>
   }
-  
-  
+ 
   <div>
    {itemDetail?.map(it=>{
     return(
@@ -70,7 +68,7 @@ return(
        stock={it.stock}>
      </ItemDetail>
            <div className="item-detail-info-container">
-           <ItemDetailInfo desc={it.desc} id={it.id} title={it.title} value= {itemDetail} ></ItemDetailInfo>
+           <ItemDetailInfo desc={it.desc} id={it.id}   ></ItemDetailInfo>
           </div>
           </>
     )

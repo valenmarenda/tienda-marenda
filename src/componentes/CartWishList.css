@@ -1,0 +1,11 @@
+.container-wishList{
+    width: 80%;
+    min-height: 60vh;
+    margin: 2rem auto;
+}
+.container-wishList h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import ItemDetailContainer from './componentes/ItemDetailContainer';
@@ -8,11 +7,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import NavBarCards from './componentes/NavBarCards';
 import Footer from './componentes/Footer';
 import { CartProvider } from './context/CartContext';
-import Cart from './componentes/Cart'
-import CartWidget from './componentes/CartWidget'
-import CheckOut from './componentes/CheckOut'
-import Register from './componentes/Register'
-import CartWishList from './componentes/CartWishList'
+import Cart from './componentes/Cart';
+import CheckOut from './componentes/CheckOut';
+import Register from './componentes/Register';
+import CartWishList from './componentes/CartWishList';
 
 
 function App() {
@@ -36,9 +34,6 @@ function App() {
       </Route>
       <Route exact path="/cart">
        <Cart/>
-      </Route>
-      <Route exact path="/cart">
-       <CartWidget/>
       </Route>
       <Route exact path="/cartwishlist">
        <CartWishList/>

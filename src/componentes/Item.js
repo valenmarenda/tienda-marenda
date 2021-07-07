@@ -62,7 +62,7 @@ export default function Item({img, title, price, cat, pId}) {
         <button className="icon-item-detail-shopping"><i className="fas fa-shopping-cart"></i></button>
       </Link>
         
-        <button className="icon-item-detail"><i className="far fa-heart"></i></button>
+        
         
       </CardActions>
       </div>

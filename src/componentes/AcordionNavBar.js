@@ -68,7 +68,8 @@ export default function CustomizedMenus() {
           <p>Items agregados:</p> <Cartwidget/> 
           </div>
           <div className="navBarCard-totalPrice">
-          <p>Subtotal:</p> <h3> $ {totalPriceItems()}</h3>
+          <p>Subtotal:</p> 
+          <h3> $ {totalPriceItems()}</h3>
           </div>
           <Link to="/cart" className="navBarCard-btn">
           <button className="btn">Finalizar compra</button>

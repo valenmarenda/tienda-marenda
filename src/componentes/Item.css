@@ -34,6 +34,7 @@
     color: #fff;
     border: 1px solid #3AB3C4;
     cursor: pointer;
+    margin-right: 2rem;
 }
 
 .icon-item-detail-shopping:hover{

@@ -24,7 +24,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box div={3}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -46,11 +46,12 @@ function a11yProps(index) {
 }
 
 
-export default function ItemDetailInfo(desc, id) {
+export default function ItemDetailInfo(desc) {
 
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const descProduct = desc.desc
+  const keyProduct = desc.id
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,7 +62,7 @@ export default function ItemDetailInfo(desc, id) {
   };
 
   return (
-    <div key={id} className="container-detailInfo"  >
+    <div key={keyProduct} className="container-detailInfo"  >
       
       <AppBar position="static" color="default">
         <Tabs
@@ -84,27 +85,27 @@ export default function ItemDetailInfo(desc, id) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} >
-       <h3>{descProduct} Ideal para todo tipo de piel. </h3> 
+          <div className="container-detailInfo">
+          {descProduct} Ideal para todo tipo de piel.
+          </div>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
+          <div className="container-detailInfo">
           <div className="container-pagos">
-          <h3>Pagos a través de</h3>
+          Pagos a través de
           <img src={pagos} alt="pagoslogos"></img>
-          <h3>Con tarjetas de crédito</h3>
+          Con tarjetas de crédito
+          </div>
           </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <h3>TIPO DE ENVIO	CAPITAL FEDERAL Y GBA	RESTO DEL PAÍS	COMPRAS MAYORES A $4000
-SUCURSAL ANDREANI	$350	$650	GRATIS A TODO EL PAÍS
-A DOMICILIO	$350	$650	GRATIS A TODO EL PAÍS
-
-Los envíos a domicilio se realizan a través de Andreani. El horario de entrega es de 9 a 18hs. Andreani te va enviar un link de seguimiento de tu pedido a través de un mail.
-
-También podes elegir como opción retiro por sucursal de Perfumerías Pigmento y ahorrá el costo de envío. Hay locales de punto de entrega en CABA, GBA, La Plata, San Fernando y Luján. Ver listado completo de sucursales habilitadas
-acá
-.
-
-Vas a recibir notificaciones del estado de tu pedido vía mail o podes dar seguimiento a tu pedido desde tu perfil.</h3>
+          <div className="container-detailInfo">
+          TIPO DE ENVIO	CAPITAL FEDERAL Y GBA	RESTO DEL PAÍS	COMPRAS MAYORES A $4000
+          SUCURSAL ANDREANI	$350	$650	GRATIS A TODO EL PAÍS A DOMICILIO	$350	$650	GRATIS A TODO EL PAÍS
+         Los envíos a domicilio se realizan a través de Andreani. El horario de entrega es de 9 a 18hs. Andreani te va enviar un link de seguimiento de tu pedido a través de un mail.
+         También podes elegir como opción retiro por sucursal de Perfumerías Pigmento y ahorrá el costo de envío. Hay locales de punto de entrega en CABA, GBA, La Plata, San Fernando y Luján. Ver listado completo de sucursales habilitadas acá.
+         Vas a recibir notificaciones del estado de tu pedido vía mail o podes dar seguimiento a tu pedido desde tu perfil.
+         </div>
         </TabPanel>
       </SwipeableViews>
     </div>

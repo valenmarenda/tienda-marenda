@@ -6,8 +6,9 @@ import { useCart} from '../context/CartContext';
 
 
 
-export default function ItemDetail({img, title, price, desc, id, stock}) {
+export default function ItemDetail({img, title, price, desc, id, stock, key}) {
   const [eventItem, setEventItem] = useState (0);
+  const [wishEvent, setWishEvent]= useState(0)
   const { addItem, addWishList} = useCart()
 
 const onAddItem = (e) => {
@@ -15,10 +16,11 @@ setEventItem(e)
 addItem(title, img, e, price, id, stock)
 }
 
-const handleClick =() => {
-
+const handleClick =(e) => {
+  setWishEvent(e)
   addWishList(title, price, img, id, desc)
 }
+
 
   return (
       <div>
@@ -36,7 +38,16 @@ const handleClick =() => {
              
            </div>
            }
-           <button className="icon-item-detail" onClick={handleClick} ><i className="far fa-heart"></i></button>
+           { wishEvent ===0?
+           <button className="icon-item-detail" onClick={handleClick} ><i className="far fa-heart"></i></button> 
+           :
+           <div className="wishList-msj"> 
+           <p>El producto se agregó a tu lista de deseos</p>
+           <Link to="/cartwishlist">
+           <button className="btn btn-second">ir a lista de deseos</button>
+           </Link>
+           </div>
+          }
          </div>
        </div>
        

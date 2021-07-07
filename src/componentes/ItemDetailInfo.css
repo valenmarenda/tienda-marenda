@@ -7,4 +7,13 @@
 .container-pagos img{
     width: 15rem;
 }
+.container-pagos{
+    display: flex;
+    flex-direction: column;
+}
 
+.container-detailInfo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 2rem;
+}

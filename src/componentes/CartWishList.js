@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart} from '../context/CartContext';
 import CartWishListContent from './CartWishListContent'
+import './CartWishList.css';
 
 
 export default function CartWishList(){
@@ -13,8 +14,8 @@ export default function CartWishList(){
     }
 
     return (
-        <>
-        <h1>Lista de deseos</h1>
+        <div className="container-wishList">
+        <h2>Lista de deseos</h2>
 
         {wishListItems.length === 0? (<h1>No hay productos agregados</h1>): (
         <div className="container-itemsWL">
@@ -43,6 +44,6 @@ export default function CartWishList(){
         <button className="btn btn-vaciar" onClick={clearProducts}>Vaciar Wish List</button>
         </div>
         )}
-        </>
+        </div>
     )
 }

@@ -41,7 +41,7 @@ const itemQuantity = cartitems.map((i)=>{return ( i)})
              <p>Precio total:$ <span> {totalPriceItems()} </span></p>
          </div>
          </div>  
-           <div className="container-formUser">
+           <div className="container">
             <FormUser value= {{itemProduct, itemQuantity}} ></FormUser>
            </div>
         </div>

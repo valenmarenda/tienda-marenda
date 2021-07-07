@@ -114,15 +114,18 @@ nav .nav-suscribe{
   flex-direction: row;
   align-items: center;
   color: #fff;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 1.8rem;
   margin-right: 1rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
-
 }
+nav .nav-suscribe h3{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+}
+
 .nav-suscribe i{
   margin-right: 0.5rem;
+  font-size: 2rem;
 }
 .nav-suscribe:hover{
   color: #0d181a;
@@ -135,9 +138,13 @@ font-size: 3rem;
 color: #fff;
 font-family: 'Bebas Neue', cursive;
 margin-bottom: 3rem;
+transition: 1s;
 }
 
-
+.NavbarItems button:hover {
+  color: black;
+  transition: 1s;
+}
 
 
 

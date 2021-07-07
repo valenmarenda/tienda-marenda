@@ -18,10 +18,18 @@ class NavbarHome extends Component {
            <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
          <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+           <Link to="/">
            <button>Home</button>
-           <button>Promociones</button>
-           <button>Contacto</button>
+           </Link>
+           <Link to="/cart">
            <button>Carrito</button>
+           </Link>
+           <Link to="/cartwishlist">
+           <button>Lista de deseos</button>
+           </Link>
+           <Link to="/register">
+           <button>Newsletter</button>
+           </Link>
          </ul>
          <p>menu</p>
       </div>

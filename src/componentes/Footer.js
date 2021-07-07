@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <div className="footer-container">
         <div className="footer-container2">
-        <Link to="/">
+        <Link to="/register">
         <button>Suscribite</button>
         </Link>
         <h1>vila en las redes</h1>
@@ -18,7 +18,7 @@ export default function Footer() {
         <i className="fab fa-linkedin-in footer-icon"></i>
         </div>
         </div>
-        <h4>Créditos: <span>ByValenMarenda</span></h4>
+        <h4>Créditos: <span>Valen Marenda</span></h4>
         </div>
     )
   }

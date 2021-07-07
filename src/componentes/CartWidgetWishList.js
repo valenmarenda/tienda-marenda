@@ -7,7 +7,9 @@ const CartwidgetWishList = () =>{
 
     return (
         <div className="Cart-wishList">
+        {wishListQuantity ===0? <p></p>:
         <p>{wishListQuantity}</p>
+         }
         </div>
     )
 }
