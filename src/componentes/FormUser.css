@@ -1,0 +1,78 @@
+.container-formUser{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.container-formulario{
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+
+}
+.container-formulario h3{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.container-formulario input{
+    width: 70%;
+    margin: 0.5rem auto;
+    background-color: rgb(253, 253, 253);
+    border:1px solid #3AB3C4;
+    border-radius: 5px;
+    height: 2rem;
+}
+.container-formulario label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 10%;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+}
+.form-item p{
+   margin: 0 0 0 10%;
+   font-size: 1.2rem;
+}
+.container-formulario .btn-important{
+    align-self: center;
+    margin: 1rem 0 2rem 10%;
+}
+
+@media (min-width: 768px){
+    .container-formUser{
+        width: 50%;
+
+    
+    }
+}
+
+.container-confCompra{
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.container-confCompra h2{
+   font-size: 2rem;
+   margin: 2rem;
+   
+}
+
+.container-confCompra p{
+    font-size: 1.8rem;
+    margin: 2rem ;
+}
+
+.container-confCompra p span{
+    font-weight: bolder;
+   
+}
+
+.container-confCompra button{
+    margin: 2rem;
+}

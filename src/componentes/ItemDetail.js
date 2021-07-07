@@ -8,7 +8,6 @@ import { useCart} from '../context/CartContext';
 
 export default function ItemDetail({img, title, price, desc, id, stock}) {
   const [eventItem, setEventItem] = useState (0);
-
   const { addItem, addWishList} = useCart()
 
 const onAddItem = (e) => {
@@ -23,9 +22,10 @@ const handleClick =() => {
 
   return (
       <div>
-       <div className="container-item-detail">
+        
+       <div key= {id} className="container-item-detail">
          <img alt="imgProduct" src={img}></img>
-         <div className="info-item-details">
+         <div  className="info-item-details">
            <h1>{title}</h1>
            <p> {desc} </p>
            <p className="price-detail"> <span>$</span> {price} </p>
@@ -39,6 +39,7 @@ const handleClick =() => {
            <button className="icon-item-detail" onClick={handleClick} ><i className="far fa-heart"></i></button>
          </div>
        </div>
+       
       </div>
   );
 }

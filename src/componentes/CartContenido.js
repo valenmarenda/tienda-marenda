@@ -23,12 +23,12 @@ export default function CartContenido({item, quantity}){
         <>
         <div className="container-cardContenido">
         <img src={item.img} alt="Imagen artículo"></img>
-       <h1> {item.desc} </h1> 
-       <p> $ {price} </p>
-       <p> {quantity} </p>
-       <h1> ${totalPriceProduct} </h1>
+       <h2> {item.desc} </h2> 
+       <h3> $ {price} </h3>
+       <h3> {quantity} </h3>
+       <h2> ${totalPriceProduct} </h2>
        </div>
-       <button onClick={()=>remover(item)}>Borrar</button>
+       <button className="btn btn-second" onClick={()=>remover(item)}>Borrar producto</button>
        
         </>
         )}

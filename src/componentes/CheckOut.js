@@ -24,23 +24,24 @@ const itemQuantity = cartitems.map((i)=>{return ( i)})
          <div> 
           <div className="container-compra">
             <h1>Resumen de compra</h1>
-             <div>
-              <p> {totalQuantitys()} productos en el carrito </p>
+             
+              <p><span>{totalQuantitys()}</span>  productos en el carrito </p>
+              <div className="container-ItemsCompra" >
             {cartitems?.map((i)=>{
                 return (
-                    <div key= {i.item.id} >
+                    <div className="container-itemCompra" key= {i.item.id} >
                     <img src= {i.item.img} alt="imagen item"></img>
-                    <p> {i.item.desc} </p>
-                    <p>Precio: {i.item.price} </p>
+                    <h3> {i.item.desc} </h3>
+                    <p>Precio: ${i.item.price} </p>
                     <p>Cantidad: {i.quantity} </p>
                     </div>
                 )
             })}
              </div>
-             <p>Precio total: {totalPriceItems()} </p>
+             <p>Precio total:$ <span> {totalPriceItems()} </span></p>
          </div>
          </div>  
-           <div>
+           <div className="container-formUser">
             <FormUser value= {{itemProduct, itemQuantity}} ></FormUser>
            </div>
         </div>

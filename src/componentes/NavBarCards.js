@@ -8,7 +8,7 @@ const NavBarCards = () => {
 return (
 <div className="NavBarCards-container">
   <Link to="/cartwishlist">
-<div className="navbarCards-icons">
+<div className="navbarCards-wishList ">
      <i className="far fa-heart"></i> 
      <CartwidgetWishList/>
      <div className="linea-carrito"><p>Lista de deseos</p></div>

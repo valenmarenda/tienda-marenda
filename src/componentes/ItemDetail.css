@@ -41,12 +41,13 @@
 
 }
 .icon-item-detail {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     background-color: #fff;
     color: #3AB3C4;
     border: 1px solid #3AB3C4;
+    margin-top: 1rem;
 }
 
 .icon-item-detail:hover{

@@ -14,9 +14,13 @@
     background-color: #fff;
     z-index: 100;
     padding: 1rem 0;
-    height: 15rem;
+    height: 10rem;
 }
 
+p, h3{
+    font-family: 'Montserrat', sans-serif;
+
+}
 
 
  .searchItems-container{
@@ -64,7 +68,6 @@ height: 4rem;
 .icon-navbar{
     margin: 1rem;
     font-size: 2.5rem;
-
     border: none;
     color:#3AB3C4;
     margin-right: 1rem;
@@ -82,6 +85,7 @@ height: 4rem;
       align-items: center;
       margin-right: 1rem;
   }
+
 
 
     @media (min-width: 678px){
@@ -126,3 +130,29 @@ height: 4rem;
             margin: 0 0.2rem;
         }
     }
+
+    .navbarCards-wishList {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        transition: 1s;
+      }
+      .navbarCards-wishList:hover{
+          background-color:#f0efef;
+      }
+      .navbarCards-wishList .fa-heart{
+          font-size: 1.5rem;
+          margin-right: 0.5rem;
+      }
+
+      .Cart-wishList{
+          margin-right: 1rem;
+      }

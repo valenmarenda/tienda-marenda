@@ -1,13 +1,14 @@
 import { useCart} from '../context/CartContext';
-import './AcordionNavBar.css';
+
 
 const CartwidgetWishList = () =>{
     const wishList = useCart()
     const wishListQuantity = wishList.wishList.items.length
 
     return (
-        
+        <div className="Cart-wishList">
         <p>{wishListQuantity}</p>
+        </div>
     )
 }
 

@@ -30,8 +30,8 @@ useEffect(()=> {
 
 
 return(
-    <>
-
+ 
+   <div className="container-itemList">
      <div className="container-home">
        <h1>Tienda online</h1>
        <div className="container-item-list">
@@ -39,7 +39,8 @@ return(
          <ItemList>{itemContent}</ItemList>
        </div>
      </div>
-    </>
+     </div>
+   
 )
 }
 

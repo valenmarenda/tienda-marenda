@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {  useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -45,21 +45,9 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: 700,
-    border: 0,
-    marginLeft: 10,
-    marginRight:10, 
-    
-    
-  },
-  
-}));
 
+export default function ItemDetailInfo(desc, id) {
 
-
-export default function ItemDetailInfo(desc, key) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const descProduct = desc.desc
@@ -73,7 +61,7 @@ export default function ItemDetailInfo(desc, key) {
   };
 
   return (
-    <div key={key} className="container-detailInfo"  >
+    <div key={id} className="container-detailInfo"  >
       
       <AppBar position="static" color="default">
         <Tabs
@@ -96,7 +84,7 @@ export default function ItemDetailInfo(desc, key) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction} >
-        {descProduct} Ideal para todo tipo de piel. 
+       <h3>{descProduct} Ideal para todo tipo de piel. </h3> 
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <div className="container-pagos">

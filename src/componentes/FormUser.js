@@ -3,8 +3,7 @@ import { getFireStore} from '../firebase/firebase';
 import { useCart} from '../context/CartContext';
 import {Link} from 'react-router-dom';
 import { useForm } from 'react-hook-form'
-
-
+import './FormUser.css'
 
 const FormUser = (itemProduct) => {
    const [orderId, setOrderId] = useState([]);
@@ -64,55 +63,58 @@ const FormUser = (itemProduct) => {
         {orderId.length === 0 ?
         <div className="container-formulario">
             <h1>Formulario</h1>
+            <h3>Completa el formulario para finalizar tu compra</h3>
             <form onSubmit={handleSubmit(onSubmit)} >
             <div className="col-md-3">
-                  <div>
+                  <div className="form-item">
                     <label htmlFor="nombre">Tu nombre</label>
                      <input type="name" {...register("nombre", { required: "Debes ingresar tu nombre", maxLength: 20, minLength: 2 })} />
                      {errors.nombre && (<p style={{ color: "red" }}>{errors.nombre.message}</p>)}
                   </div>
-                  <div>
+                  <div className="form-item">
                     <label htmlFor="nombre">Tu apellido</label>
                      <input type="name" {...register("apellido", { required: "Debes ingresar tu apellido", maxLength: 20, minLength: 2 })} />
                      {errors.apellido && (<p style={{ color: "red" }}>{errors.apellido.message}</p>)}
                   </div>
-                  <div>
+                  <div className="form-item">
                     <label >Tu teléfono</label>
                      <input type="phone" {...register("tel", { required: "Debes ingresar tu teléfono"})} />
                      {errors.tel && (<p style={{ color: "red" }}>{errors.tel.message}</p>)}
                   </div>
-                 <div>
+                 <div className="form-item">
                    <label>Tu Mail: </label>
                     <input type="email" {...register("email", { required: "Debes ingresar tu email" })}/>
                     {errors.email && (<p style={{ color: "red" }}>{errors.email.message}</p>)}
                  </div>
-                 <div>
+                 <div className="form-item">
                     <label>Confirma tu email</label>
                     <input {...register("emailConfirmation", {
                       required: "Por favor confirma tu email!",
                       validate: { matchesPreviousPassword: (value) => {
                      const { email } = getValues();
                      return email === value || "Los emails deben coincidir";}}})}/>
-                 </div>
+                 
                 {errors.emailConfirmation && (<p style={{ color: "red" }}>{errors.emailConfirmation.message}</p>)}
-                    
-                    <button type="submit"  className="btn btn-primary">Enviar</button>
+                </div>
+                    <button type="submit"  className="btn btn-important">Enviar</button>
                 </div>
             </form>
             </div> 
 
             
             :
-            <>
+            
+            <div className="container-confCompra">
             <h2>Muchas gracias por tu compra,</h2>
             <p>
-              Tu nro de orden es: {orderId}. Recirá un email cuando su pedido esté listo para ser retirado. 
+              Tu nro de orden es: <span> {orderId} </span>. Recirás un email cuando tu pedido esté listo para ser retirado. 
             </p>
             <Link to="/">
-            <button className="btn" onClick={removerItem()}>Volver al inicio</button>
+            <button className="btn btn-important" onClick={removerItem()}>Volver al inicio</button>
             </Link>
+            </div>
             
-        </>
+        
       }
                 
         </>

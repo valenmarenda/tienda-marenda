@@ -12,3 +12,7 @@
 .links-category{
     padding-left: 8rem;
 }
+
+.container-itemList{
+    min-height: 50vh;
+}

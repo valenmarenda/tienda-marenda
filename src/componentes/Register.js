@@ -39,20 +39,20 @@ export default function Register(){
             <div className="container-register">
                 <h1>Suscribite a nuestro Newsletter y accedé a todas nuestras promociones! </h1>
          <div className="App">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label>Nombre</label>
+      <form className="container-formulario " onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-item" >
+          <label >Nombre</label>
           <input type="name" {...register("nombre", { required: "Debes ingresar tu nombre", maxLength: 20, minLength: 2 })} />
           {errors.nombre && (<p style={{ color: "red" }}>{errors.nombre.message}</p>)}
         </div>
 
-        <div>
+        <div className="form-item">
           <label htmlFor="lastName">Apellido</label>
           <input type="name" {...register("apellido",{ required: "Debes ingresar tu apellido", maxLength: 20, minLength: 2 })} />
           {errors.apellido && (<p style={{ color: "red" }}>{errors.apellido.message}</p>)}
         </div>
 
-        <div>
+        <div className="form-item">
           <label htmlFor="email">Email</label>
           <input
             type="email"

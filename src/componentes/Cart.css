@@ -1,21 +1,103 @@
 .container-cart{
-    margin: 3rem
+    margin: 3rem;
+    min-height: 60vh;
+    
 }
 
 .cart-info{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
     justify-items: center;
+    align-items: center;
 }
 
 .container-cardContenido{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
     justify-items: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .container-cardContenido img{
     width: 5rem;
 }
+.container-cardContenido h2{
+    text-align: center;
+}
+
+.container-cart h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.btn-second{
+    color: #3AB3C4;
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 5%;
+}
+
+.total-price h2{
+    text-align: end;
+    margin-right: 5%;
+    font-size: 2rem;
+
+}
+.total-price span{
+    color:#3AB3C4
+
+}
+
+.btn-carrito{
+    font-size: 1.8rem;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.container-contenidoCarrito{
+    display: flex;
+}
+@media (max-width: 800px){
+    .cart-info h2{
+        font-size: 1.2rem;
+    }
+    .container-contenidoCarrito{
+        display: block;
+    }
+}
+.container-resumenCompra{
+width: fit-content;
+display: flex;
+flex-direction: column;
+margin: 1rem auto;
+background-color: #f0f0f0;
+border-radius: 10px;
+padding: 2rem;
+
+}
+.container-resumenCompra p {
+   font-size: 1.5rem;
+   margin: 0.5rem;
+}
+.container-resumenCompra a{
+    align-self: center;
+    margin: 1rem 0;
+}
+.container-resumenCompra h3{
+    font-size: 1.2rem;
+}
+
+.btn-important{
+    color: black;
+    box-shadow: 2px 2px 2px rgb(192, 188, 188);
+}
+.item-resumenCompra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+

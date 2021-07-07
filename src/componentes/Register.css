@@ -1,3 +1,18 @@
 .container-register{
-    margin-left: 5rem;
+   width: 90%;
+   margin: 2rem auto;
+}
+
+.container-register h1{
+    text-align: center;
+    margin: 2rem;
+}
+
+.container-register .container-formulario{
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.container-register button{
+    margin: 2rem 0 2rem 10%;
 }

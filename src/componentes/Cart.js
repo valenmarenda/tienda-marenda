@@ -23,21 +23,25 @@ return cartInfo.totalPrice()
 
 
     return(
-        <div> 
+        <> 
         <div className="container-cart">
+            
             {cartInfo.cartInfo.items.length === 0? (
             <h1>No hay productos agregados</h1>
          ) : (
             <>
+            
             <h1>Carrito de compras</h1>
+            <div className="container-contenidoCarrito">
+            <div>
             <div className="cart-info">
-                <h2>Imagen</h2>
+                <h2>Producto</h2>
                 <h2>Artículo</h2>
                 <h2>Precio</h2>
                 <h2>Cantidad</h2>
                 <h2>Subtotal</h2>
             </div>
-       <div className="">
+       
         {cartitems?.map(i => {
        return (
          <CartContenido  
@@ -48,34 +52,46 @@ return cartInfo.totalPrice()
           </CartContenido>
       )
   })} 
-     </div>
-
-     <h1 > Total $ {totalPriceItems()} </h1>
-     </>
-     ) };
-
-     <div>
-        <Link to= "/"><button>Continuar comprando</button></Link>
-         <button  onClick={clearProducts}>Vaciar carrito de compras</button>
+     
+     <div className="total-price">
+     <h2><span> Total $ </span>{totalPriceItems()} </h2>
      </div>
      
-        
+
+     <div className="btns-carrito">
+        <Link to= "/"><button className=" btn btn-carrito">Continuar comprando</button></Link>
+         <button className=" btn btn-carrito"   onClick={clearProducts}>Vaciar carrito </button>
      </div>
      
-     <div> 
-         <h2>Resumen de compras</h2>
-         <p>Subtotal</p> 
+     </div>
+     
+     
+     <div className="container-resumenCompra"> 
+         
+         <h1>Resumen de compra</h1>
+         <div className="item-resumenCompra">
+         <h3>Subtotal</h3> 
          <p>$ {totalPriceItems()}</p>
-         <p>Envío (retiro por sucursal)</p>
+         </div>
+         <div className="item-resumenCompra">
+         <h3>Envío (retiro por sucursal)</h3>
          <p>$ 0.00</p>
-         <p>Total del pedido</p>
-         <p>$ {totalPriceItems()}</p>
+         </div>
+         <div className="item-resumenCompra">
+         <h3>Total del pedido</h3>
+         <p className="item">$ {totalPriceItems()}</p>
+         </div>
          <Link to="/cart/CheckOut">
-         <button >Realizar pedido</button>
+         <button className="btn btn-important" >Realizar pedido</button>
          </Link>
          
          
      </div>
      </div>
+     </>
+) }
+
+     </div>
+     </>
  )
 }
