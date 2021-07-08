@@ -16,7 +16,7 @@ Es una e-commmers para la venta de productos de belleza.
 
 -Vista de cada item: vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
 
--Cart persistentes: Utilización de LocalStorage en el carrito de comprar y en la wish list
+-Cart persistentes: Utilización de LocalStorage en el carrito de compras y en la wish list
 
 ### Instalación 🔧
 ​
